@@ -9,23 +9,27 @@ public enum PanelAdjustType
 [ExecuteInEditMode]
 public class AdaptiveSize_UI : MonoBehaviour
 {
-    private GridLayoutGroup gridLayout;
+    [SerializeField] private GridLayoutGroup gridLayout;
     private RectTransform myRectTrans;
     private float perModSize;
     public PanelAdjustType adjustType;
-    public int maxWidth = 3;
-    public int maxHeight = 3;
+    public int maxWidth = 30;
+    public int maxHeight = 30;
 
 
     private void Start()
     {
         myRectTrans = GetComponent<RectTransform>();
-        gridLayout = GetComponentInChildren<GridLayoutGroup>();
-        perModSize = gridLayout.cellSize.x + gridLayout.spacing.x;
+        gridLayout = GetComponent<GridLayoutGroup>();
     }
 
     private void Update()
     {
+        if (adjustType == PanelAdjustType.Horizontal)
+            perModSize = gridLayout.cellSize.x + gridLayout.spacing.x;
+        else
+            perModSize = gridLayout.cellSize.y + gridLayout.spacing.y;
+
         if (adjustType == PanelAdjustType.Horizontal)
         {
             if (gridLayout.padding.left + gridLayout.padding.right + gridLayout.transform.childCount * perModSize != myRectTrans.rect.width)

@@ -11,6 +11,7 @@ public class DialogSystem : GameKitComponent
     public static bool IsActive = true;
     private DialogTree dialogTree;
     private UI_DialogSystem uI_DialogSystem;
+    private UI_Recorder uI_Recorder;
     private TextAnimatorPlayer textAnimatorPlayer;
     private Character currentCharacter;
     private CharacterPool characterPool;
@@ -23,12 +24,12 @@ public class DialogSystem : GameKitComponent
     private void Start()
     {
         uI_DialogSystem = UIManager.instance.GetUI<UI_DialogSystem>("UI_DialogSystem");
+        uI_Recorder = UIManager.instance.GetUI<UI_Recorder>("UI_Recorder");
         textAnimatorPlayer = uI_DialogSystem.textAnimatorPlayer;
         AddressableManager.instance.GetAssetAsyn<CharacterPool>("Character Pool", (characterPool) =>
         {
             this.characterPool = characterPool;
         });
-        LoadAnimator();
     }
     public void StartDialog(string title, string dialogText)
     {
@@ -55,7 +56,7 @@ public class DialogSystem : GameKitComponent
                 ExcuteTextDisplay();
                 uI_DialogSystem.HideResponse(() =>
                 {
-                    uI_DialogSystem.uI_DialogResponse.isActive = false;
+                    uI_DialogSystem.uI_DialogResponse.IsActive = false;
                     uI_DialogSystem.uI_DialogResponse.gameObject.SetActive(false);
                 });
                 return;
@@ -85,7 +86,7 @@ public class DialogSystem : GameKitComponent
         {
             // Debug.Log($"Update Choice UI");
             uI_DialogSystem.UpdateOptions(options);
-            uI_DialogSystem.uI_DialogResponse.isActive = true;
+            uI_DialogSystem.uI_DialogResponse.IsActive = true;
             uI_DialogSystem.uI_DialogResponse.gameObject.SetActive(true);
             isOptionShowing = true;
             isInSelection = true;
@@ -103,22 +104,25 @@ public class DialogSystem : GameKitComponent
         if (node == null || node.nodeEntity.speaker == "Default")
             return;
 
-        if(node.nodeEntity.speaker == ">>")
+        if (node.nodeEntity.speaker == ">>")
             uI_DialogSystem.speakerName.text = "";
-        else if(node.nodeEntity.speaker == "??")
+        else if (node.nodeEntity.speaker == "??")
             uI_DialogSystem.speakerName.text = "未知";
         else
             uI_DialogSystem.speakerName.text = node.nodeEntity.speaker;
         uI_DialogSystem.contents.text = node.nodeEntity.contents;
-        Character character = characterPool.FindCharacter(node.nodeEntity.speaker.Correction());
-        if (currentCharacter != character)
+
+        if (node.nodeEntity.speaker != ">>")
         {
-            currentCharacter = character;
-            uI_DialogSystem.speakerAnimator.SetTrigger("FadeIn");
+            Character character = characterPool.FindCharacter(node.nodeEntity.speaker.Correction());
+            if (currentCharacter != character)
+            {
+                currentCharacter = character;
+            }
+            RuntimeAnimatorController charaAnimator = FindAnimator(character.idName);
         }
-        RuntimeAnimatorController charaAnimator = FindAnimator(character.idName);
-        uI_DialogSystem.character.avatar.sprite = character.GetMood(node.nodeEntity.moodName).avatar;
-        uI_DialogSystem.character.animator.runtimeAnimatorController = charaAnimator;
+
+        uI_Recorder.CreateLine(node);
     }
 
     private void PhaseNode(Node<Dialog> dialogNode, UnityAction onTextShowed = null)
@@ -216,17 +220,7 @@ public class DialogSystem : GameKitComponent
         dialogTree.Clear();
         dialogTree = null;
         uI_DialogSystem.Hide();
-    }
-
-    private void LoadAnimator()
-    {
-        if (charaAnimators == null || charaAnimators.Count == 0)
-        {
-            AddressableManager.instance.GetAssetsAsyn<RuntimeAnimatorController>(new List<string> { "Character Animator" }, callback: (IList<RuntimeAnimatorController> assets) =>
-            {
-                charaAnimators = new List<RuntimeAnimatorController>(assets);
-            });
-        }
+        ClearRecords();
     }
 
     private RuntimeAnimatorController FindAnimator(string name)
@@ -240,4 +234,6 @@ public class DialogSystem : GameKitComponent
         }
         return null;
     }
+
+    public void ClearRecords() => uI_Recorder.ClearLines();
 }

@@ -10,10 +10,17 @@ namespace GameKit
     [RequireComponent(typeof(CanvasGroup))]
     public class UIGroup : UIBehaviour
     {
+        private bool isActive;
+        public new virtual bool IsActive
+        {
+            get { return isActive; }
+            set { isActive = value; }
+        }
         private Dictionary<string, List<UIBehaviour>> uiComponet = new Dictionary<string, List<UIBehaviour>>();
         protected CanvasGroup panelCanvasGroup;
         protected override void Awake()
         {
+            isActive = true;
             UIManager.instance.RegisterUI(this as UIGroup);
             FindChildrenByType<Button>();
             FindChildrenByType<Image>();
@@ -71,6 +78,20 @@ namespace GameKit
         protected override void OnDestroy()
         {
             UIManager.instance.RemoveUI(this);
+        }
+
+        protected virtual void ChangeDisplay()
+        {
+            if (IsActive)
+            {
+                Hide();
+                IsActive = false;
+            }
+            else
+            {
+                Show();
+                IsActive = true;
+            }
         }
     }
 

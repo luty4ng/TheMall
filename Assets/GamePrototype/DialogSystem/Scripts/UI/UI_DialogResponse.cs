@@ -11,7 +11,6 @@ public class UI_DialogResponse : UIGroup
 {
     public UI_Selector selector;
     public List<UI_DialogOption> ui_options = new List<UI_DialogOption>();
-    public bool isActive = false;
     private List<Option> currentOptions = new List<Option>();
     private VerticalLayoutGroup verticalLayoutGroup;
     private Sequence selectorSeq;
@@ -42,7 +41,7 @@ public class UI_DialogResponse : UIGroup
     }
     void Update()
     {
-        if (!isActive)
+        if (!IsActive)
             return;
 
         foreach (var ui_option in ui_options)
@@ -86,16 +85,16 @@ public class UI_DialogResponse : UIGroup
         animator.SetTrigger("FadeOut");
         animator.OnComplete(callback: callback);
         currentOptions.Clear();
-        foreach (var ui_option in ui_options)
-        {
-            ui_option.gameObject.SetActive(false);
-        }
+        // foreach (var ui_option in ui_options)
+        // {
+        //     ui_option.gameObject.SetActive(false);
+        // }
     }
 
     public void OnOptionEnter(UI_DialogOption option)
     {
-        currentIndex = option.index;
-        MoveSelector(currentIndex);
+        // currentIndex = option.index;
+        // MoveSelector(currentIndex);
     }
 
     public void OnOptionExit(UI_DialogOption option)

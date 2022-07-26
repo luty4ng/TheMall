@@ -48,11 +48,9 @@ public class ModuleTesting : MonoBehaviour
 
         if (dialogAssets == null || dialogAssets.Count == 0)
         {
-
             AddressableManager.instance.GetAssetsAsyn<DialogAsset>(new List<string> { "DialogPack" }, callback: (IList<DialogAsset> assets) =>
             {
                 dialogAssets = new List<DialogAsset>(assets);
-                Debug.Log($"CreateModuleUnits");
                 HideAllModules();
                 for (int i = 0; i < dialogAssets.Count; i++)
                 {
@@ -106,7 +104,6 @@ public class ModuleTesting : MonoBehaviour
 
     private void CreateModuleUnits(string name, UnityAction action)
     {
-        Debug.Log($"Create Modules Units");
         DebugButton dButton = GameObject.Instantiate<DebugButton>(debugButtonPrototype, Vector3.zero, Quaternion.identity, this.transform);
         dButton.text.text = name;
         dButton.AddListener(action);
