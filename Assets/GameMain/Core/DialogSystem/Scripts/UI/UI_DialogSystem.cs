@@ -13,6 +13,7 @@ public class UI_DialogSystem : UIGroup
     public TextAnimatorPlayer textAnimatorPlayer;
     public UI_DialogResponse uI_DialogResponse;
     public GameObject indicator;
+    public Image character;
     private Animator animator;
     
     protected override void OnStart()

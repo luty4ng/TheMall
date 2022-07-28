@@ -15,7 +15,7 @@ MonoBehaviour:
   idName: A
   displayName: "\u6D4B\u8BD5\u5458A"
   iconicColor: {r: 0, g: 0, b: 0, a: 0}
-  introduction: "\u8FD9\u4E2A\u4EBA\u662F\u7EAF"
+  introduction: "\u8FD9\u4E2A\u4EBA\u662F\u6D4B\u8BD5\u5458A"
   moods:
   - Name: Default
     avatar: {fileID: 21300000, guid: 9df0f4d8c02014347ad2d7de427e0ced, type: 3}

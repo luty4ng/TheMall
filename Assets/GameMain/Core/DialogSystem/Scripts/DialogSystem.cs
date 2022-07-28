@@ -13,7 +13,6 @@ public class DialogSystem : GameKitComponent
     private UI_DialogSystem uI_DialogSystem;
     private UI_Recorder uI_Recorder;
     private TextAnimatorPlayer textAnimatorPlayer;
-    private Character currentCharacter;
     private CharacterPool characterPool;
     private List<RuntimeAnimatorController> charaAnimators = new List<RuntimeAnimatorController>();
     private bool isOptionShowing = false;
@@ -31,6 +30,7 @@ public class DialogSystem : GameKitComponent
             this.characterPool = characterPool;
         });
     }
+
     public void StartDialog(string title, string dialogText)
     {
         Debug.Log($"Start Dialog");
@@ -39,6 +39,22 @@ public class DialogSystem : GameKitComponent
         dialogTree.Reset();
         uI_DialogSystem.Show();
         ExcuteTextDisplay();
+    }
+
+    public void StartDialog(string title)
+    {
+        AddressableManager.instance.GetAssetsAsyn<DialogAsset>(new List<string> { "DialogPack" }, callback: (IList<DialogAsset> assets) =>
+        {
+            List<DialogAsset> dialogAssets = new List<DialogAsset>(assets);
+            for (int i = 0; i < dialogAssets.Count; i++)
+            {
+                if (dialogAssets[i].title.Correction() == title.Correction())
+                {
+                    StartDialog(dialogAssets[i].title, dialogAssets[i].contents);
+                    return;
+                }
+            }
+        });
     }
 
     private void Update()
@@ -115,13 +131,9 @@ public class DialogSystem : GameKitComponent
         if (node.nodeEntity.speaker != ">>")
         {
             Character character = characterPool.FindCharacter(node.nodeEntity.speaker.Correction());
-            if (currentCharacter != character)
-            {
-                currentCharacter = character;
-            }
-            RuntimeAnimatorController charaAnimator = FindAnimator(character.idName);
+            uI_DialogSystem.character.sprite = character.GetMood(node.nodeEntity.moodName).avatar;
         }
-
+    
         uI_Recorder.CreateLine(node);
     }
 

@@ -18,12 +18,12 @@ MonoBehaviour:
   m_GUID: 1cc304e6aedc8ed4186c43b92a4afbad
   m_SerializeEntries:
   - m_GUID: bf71628fccb79f14999fd90f79345933
-    m_Address: "Assets/GamePrototype/DialogSystem/Data/Text/Scriptable/\u5BF9\u8BDD\u6D4B\u8BD5.asset"
+    m_Address: "\u5BF9\u8BDD\u6D4B\u8BD5"
     m_ReadOnly: 0
     m_SerializedLabels:
     - DialogPack
   - m_GUID: 474465743af51c64aabde1536d237c75
-    m_Address: "Assets/GamePrototype/DialogSystem/Data/Text/Scriptable/\u987A\u5E8F\u6D4B\u8BD5.asset"
+    m_Address: "\u987A\u5E8F\u6D4B\u8BD5"
     m_ReadOnly: 0
     m_SerializedLabels:
     - DialogPack
