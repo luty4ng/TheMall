@@ -30,7 +30,6 @@ public class PlayerAgent : MonoBehaviour
             {
                 currentEntity?.OnInteract();
             }
-
         }
     }
 

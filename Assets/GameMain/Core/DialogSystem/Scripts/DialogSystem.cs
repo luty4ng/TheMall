@@ -19,7 +19,6 @@ public class DialogSystem : GameKitComponent
     private bool isInSelection = false;
     private bool isTextShowing = false;
 
-
     private void Start()
     {
         uI_DialogSystem = UIManager.instance.GetUI<UI_DialogSystem>("UI_DialogSystem");

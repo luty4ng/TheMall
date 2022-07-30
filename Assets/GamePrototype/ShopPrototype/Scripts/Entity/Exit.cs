@@ -6,10 +6,10 @@ using UnityEngine.Events;
 public class Exit : EntityBase
 {
     public static int NumItem;
-    public UnityEvent OnEnterExit;
-    public DialogAsset Dialog;
-    void Start()
+    public UnityEvent onInteract;
+    protected override void OnStart()
     {
+        base.OnStart();
         NumItem = 0;
     }
 
@@ -22,5 +22,6 @@ public class Exit : EntityBase
     {
         if (dialogAsset != null)
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+        onInteract?.Invoke();
     }
 }
