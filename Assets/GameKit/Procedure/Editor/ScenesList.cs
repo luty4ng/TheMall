@@ -29,5 +29,7 @@ public static class ScenesList
     public static void Assets_GameMain_Scenes_DialogSystem_Prototype_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/DialogSystem_Prototype.unity"); }
     [MenuItem("Scenes/SpriteMask_Prototype")]
     public static void Assets_GameMain_Scenes_SpriteMask_Prototype_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/SpriteMask_Prototype.unity"); }
+    [MenuItem("Scenes/Shop_Prototype")]
+    public static void Assets_GamePrototype_ShopPrototype_Shop_Prototype_unity() { ScenesUpdate.OpenScene("Assets/GamePrototype/ShopPrototype/Shop_Prototype.unity"); }
 }
 #endif

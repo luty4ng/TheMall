@@ -37,8 +37,8 @@ namespace GameKit
         }
 
         protected virtual void OnStart() { }
-        public virtual void Show(UnityAction callback = null) { }
-        public virtual void Hide(UnityAction callback = null) { }
+        public virtual void Show(UnityAction callback = null) { panelCanvasGroup.alpha = 1; }
+        public virtual void Hide(UnityAction callback = null) { panelCanvasGroup.alpha = 0; }
         public T GetUIComponent<T>(string name) where T : UIBehaviour
         {
             if (uiComponet.ContainsKey(name))

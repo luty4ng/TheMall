@@ -29,7 +29,6 @@ public class IntervalController : MonoBehaviour
             RaycastHit2D hitInfo = Physics2D.Raycast(originPos, diretcion, 10, intervalLayer);
             if (hitInfo)
             {
-                Debug.Log(hitInfo.transform.gameObject.name);
                 currentInterval = hitInfo.transform.GetComponent<Interval>();
                 if (currentInterval == null)
                 {
