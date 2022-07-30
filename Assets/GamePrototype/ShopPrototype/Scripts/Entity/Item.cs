@@ -13,15 +13,22 @@ public class Item : EntityBase
     public ItemType itemType = ItemType.UnCollective;
     public Sprite itemSprite;
     public string itemName;
-    public string itemDesc;
+    [TextArea(50, 100)] public string itemDesc;
     public override void OnInteract()
     {
         uI_CloseUp.SetCloseUp(itemSprite, itemName, itemDesc);
+        uI_CloseUp.Show();
         if (itemType == ItemType.Collective)
         {
             Collect();
             OnDestroy();
         }
+    }
+
+    public override void OnPassExit()
+    {
+        base.OnPassExit();
+        uI_CloseUp.Hide();
     }
 
     private void Collect()
