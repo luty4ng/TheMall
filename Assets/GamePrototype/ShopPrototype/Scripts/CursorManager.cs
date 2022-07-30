@@ -9,6 +9,7 @@ public class CursorManager : MonoSingletonBase<CursorManager>
     public RaycastHit hitInfo;
     public LayerMask interactiveLayer;
 
+
     private void Update()
     {
         if (IsActive)

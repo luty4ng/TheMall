@@ -35,7 +35,6 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Enter");
         if (other.tag == "Collective" || other.tag == "Exit")
         {
             currentEntity = other.GetComponent<IInteractive>();
@@ -46,7 +45,6 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log($"Exit");
         if (other.tag == "Collective" || other.tag == "Exit")
         {
             if (currentEntity == null)

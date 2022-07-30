@@ -48,9 +48,14 @@ public class IntervalController : MonoBehaviour
         if (IsFollowing)
         {
             if (currentInterval.intervalType == IntervalType.Horizontal)
-                currentInterval.transform.position = new Vector2(originPos.x, currentInterval.transform.position.y);
+            {
+                if (originPos.x < currentInterval.rightEdge.position.x && originPos.x > currentInterval.leftEdge.position.x)
+                    currentInterval.transform.position = new Vector2(originPos.x, currentInterval.transform.position.y);
+            }
             else
+            {
                 currentInterval.transform.position = new Vector2(currentInterval.transform.position.x, originPos.y);
+            }
         }
     }
 }

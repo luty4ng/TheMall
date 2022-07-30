@@ -36,10 +36,12 @@ public class UI_CloseUp : UIGroup
         if (animator.runtimeAnimatorController != null)
         {
             animator.SetTrigger("FadeIn");
+            animator.OnComplete(1f, callback);
             return;
         }
         base.Show();
         animator.transform.gameObject.SetActive(true);
+        callback?.Invoke();
     }
 
     public override void Hide(UnityAction callback = null)
@@ -47,9 +49,11 @@ public class UI_CloseUp : UIGroup
         if (animator.runtimeAnimatorController != null)
         {
             animator.SetTrigger("FadeOut");
+            animator.OnComplete(1f, callback);
             return;
         }
         base.Hide();
         animator.transform.gameObject.SetActive(false);
+        callback?.Invoke();
     }
 }

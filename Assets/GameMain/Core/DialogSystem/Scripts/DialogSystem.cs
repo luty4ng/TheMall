@@ -215,9 +215,7 @@ public class DialogSystem : GameKitComponent
     }
     private void ExcuteTextDisplay(int index = 0)
     {
-        Debug.Log(dialogTree.currentNode);
         Node<Dialog> nextNode = GetNextNode(index);
-        Debug.Log(dialogTree.currentNode);
         ExcuteTextDisplay(nextNode);
     }
 
