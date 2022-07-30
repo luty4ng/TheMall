@@ -21,10 +21,8 @@ namespace GameKit
             LinkedListNode<GameKitComponent> current = s_GameKitComponents.First;
             while (current != null)
             {
-                
                 if (current.Value.GetType() == type)
                 {
-                    Debug.Log(current.Value.GetType() + " >>>? " + type);
                     return current.Value;
                 }
                 current = current.Next;

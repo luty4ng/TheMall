@@ -115,7 +115,6 @@ public class DialogSystem : GameKitComponent
 
     private void UpdateUI(Node<Dialog> node)
     {
-        // Debug.Log($"Update Character UI");
         if (node == null || node.nodeEntity.speaker == "Default")
             return;
 
@@ -132,7 +131,7 @@ public class DialogSystem : GameKitComponent
             Character character = characterPool.FindCharacter(node.nodeEntity.speaker.Correction());
             uI_DialogSystem.character.sprite = character.GetMood(node.nodeEntity.moodName).avatar;
         }
-    
+
         uI_Recorder.CreateLine(node);
     }
 
@@ -158,6 +157,7 @@ public class DialogSystem : GameKitComponent
     {
         if (dialogTree.currentNode.IsLeaf || index < 0 || index >= dialogTree.currentNode.Sons.Count)
             return null;
+        
         dialogTree.currentNode = dialogTree.currentNode.Sons[index];
         return dialogTree.currentNode as Node<Dialog>;
     }
@@ -215,7 +215,9 @@ public class DialogSystem : GameKitComponent
     }
     private void ExcuteTextDisplay(int index = 0)
     {
+        Debug.Log(dialogTree.currentNode);
         Node<Dialog> nextNode = GetNextNode(index);
+        Debug.Log(dialogTree.currentNode);
         ExcuteTextDisplay(nextNode);
     }
 
