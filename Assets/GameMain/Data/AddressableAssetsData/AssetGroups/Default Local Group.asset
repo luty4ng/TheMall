@@ -66,6 +66,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - DialogPack
+  - m_GUID: f73813750a038614fa739c63b18076ce
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u5C0F\u9B3C\u7684\u56DE\u5E94.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 996d76fcd71648a48a75cff08ccd0215, type: 2}
   m_SchemaSet:
