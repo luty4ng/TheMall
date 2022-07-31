@@ -19,7 +19,7 @@ public class Item : EntityBase
             if (Input.GetKeyDown(KeyCode.E))
                 return;
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
-            hasClicked = true;
+            if(canCloseUp)hasClicked = true;
         }
         else
         {
