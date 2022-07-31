@@ -7,6 +7,7 @@ public class Exit : EntityBase
 {
     public static int NumItem;
     public UnityEvent onInteract;
+    public DialogAsset Response;
     protected override void OnStart()
     {
         base.OnStart();
@@ -15,13 +16,17 @@ public class Exit : EntityBase
 
     void Update()
     {
-        if (NumItem == 3) Destroy(this.gameObject);
     }
 
     public override void OnInteract()
     {
         if (dialogAsset != null)
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
-        onInteract?.Invoke();
+        if (NumItem == 3)
+        {
+            if (dialogAsset != null)
+                dialogSystem.StartDialog(Response.title, Response.contents);
+            onInteract?.Invoke();
+        }
     }
 }

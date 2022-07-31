@@ -22,6 +22,50 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - DialogPack
+  - m_GUID: 12f38ed42c39a3540979019fa431fc4c
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/Character_\u6742\u5DE5.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dd47bd107df96af4d856b4e434f9bc13
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u5C0F\u9A6C\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 239f1d1260560ad4299f91df870dd0f7
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u624B\u529E\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 072ade7dda283b746a0b19112586b843
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u7AE5\u88C5\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: f635898ebdea56e438e5d6acd8449654
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u8759\u8760\u4FA0\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 0808599d82203514b9cbdb2b9c2a8c6d
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u8D85\u4EBA\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 31a98f03a25b7434292a6bb23b7ed713
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u798F\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 61ebc0fc71dce144a9f10c2af6c9e289
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u94F6\u952D\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 23e959a6ac2caed42924f8f7db654070
+    m_Address: "Assets/GamePrototype/ShopPrototype/Data/\u94DC\u94B1\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 996d76fcd71648a48a75cff08ccd0215, type: 2}
   m_SchemaSet:

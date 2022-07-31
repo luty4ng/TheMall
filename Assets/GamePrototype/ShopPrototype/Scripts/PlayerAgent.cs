@@ -47,11 +47,17 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Collective" || other.tag == "Exit")
+        if (other.tag == "Collective")
         {
             currentEntity = other.GetComponent<IInteractive>();
             currentEntity.OnPassEnter();
-            if(other.transform.GetComponent<Item>().hasCollected)uI_Bubble.Show();
+            if (other.transform.GetComponent<Item>().hasCollected)  uI_Bubble.Show();
+        }
+        if (other.tag == "Exit")
+        {
+            currentEntity = other.GetComponent<IInteractive>();
+            currentEntity.OnPassEnter();
+            uI_Bubble.Show();
         }
     }
 
