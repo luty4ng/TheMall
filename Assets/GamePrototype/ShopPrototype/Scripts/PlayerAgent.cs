@@ -31,6 +31,18 @@ public class PlayerAgent : MonoBehaviour
                 currentEntity?.OnInteract();
             }
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            IInteractive hitComponent = CursorManager.current.TryGetHitComponent<IInteractive>();
+            if (hitComponent != null)
+            {
+                hitComponent?.OnInteract();
+            }
+        }
+
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

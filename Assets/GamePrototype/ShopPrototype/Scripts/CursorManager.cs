@@ -6,18 +6,21 @@ using GameKit;
 public class CursorManager : MonoSingletonBase<CursorManager>
 {
     public static Vector3 MAGIC_VECTOR = Vector3.zero;
-    public RaycastHit hitInfo;
+    public RaycastHit2D hitInfo;
     public LayerMask interactiveLayer;
 
+    private void Start()
+    {
+        Enable();
+    }
 
     private void Update()
     {
         if (IsActive)
         {
-            Vector3 originPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+            Vector3 originPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10));
             Vector3 diretcion = Camera.main.transform.forward;
-            if (Physics.Raycast(originPos, diretcion, out RaycastHit hitInfo, 20, interactiveLayer))
-                this.hitInfo = hitInfo;
+            this.hitInfo = Physics2D.Raycast(originPos, diretcion, 10, interactiveLayer);
         }
     }
 
@@ -43,6 +46,12 @@ public class CursorManager : MonoSingletonBase<CursorManager>
 
     public T TryGetHitComponent<T>() where T : class
     {
+        if (!IsActive)
+        {
+            Utility.Debugger.LogWarning("CursorSystem Is Not Activate.");
+            return null;    
+        }
+
         if (!IsActive || hitInfo.transform == null || hitInfo.transform.gameObject == null)
         {
             Utility.Debugger.LogWarning("No Hit Target Exsit.");
@@ -56,42 +65,4 @@ public class CursorManager : MonoSingletonBase<CursorManager>
         }
         return component;
     }
-    
-    
-    // private Vector3 mouseWolrdPos => Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-    // private DialogSystem dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
-    // private bool Clickable;
-    // private void Update()
-    // {
-    //     Clickable = ObjectAtMousePosition();
-
-    //     if (Clickable && Input.GetMouseButtonDown(0)) 
-    //     {
-    //         ClickAction(ObjectAtMousePosition().gameObject);
-    //     }
-    // }
-
-    // private void ClickAction(GameObject clickObject) 
-    // {
-    //     var temp = clickObject.GetComponent<Item>();
-    //     switch (clickObject.tag) 
-    //     {
-    //         case "Window":
-    //             clickObject.SetActive(false);
-    //             break;
-    //         case "Collective":
-    //             //Not null
-    //             dialogSystem.StartDialog(temp.Dialog.title, temp.Dialog.contents);
-    //             temp.Collectable = true;
-    //             break;
-    //         case "Uncollective":
-    //             dialogSystem?.StartDialog(temp.Dialog.title, temp.Dialog.contents);
-    //             break;
-    //     }
-    // }
-
-    // private Collider2D ObjectAtMousePosition() 
-    // {
-    //     return Physics2D.OverlapPoint(mouseWolrdPos);
-    // }
 }
