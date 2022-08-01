@@ -51,7 +51,7 @@ public class PlayerAgent : MonoBehaviour
         {
             currentEntity = other.GetComponent<IInteractive>();
             currentEntity.OnPassEnter();
-            if (other.transform.GetComponent<Item>().hasCollected)  uI_Bubble.Show();
+            if (other.transform.GetComponent<Item>().hasClicked)  uI_Bubble.Show();
         }
         if (other.tag == "Exit")
         {

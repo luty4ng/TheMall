@@ -9,7 +9,7 @@ public class Item : EntityBase
     public Sprite itemSprite;
     public string itemName;
     public bool canCloseUp = true;
-    private bool hasClicked = false;
+    public bool hasClicked = false;
 
     [TextArea(30, 100)] public string itemDesc;
     public override void OnInteract()
@@ -27,12 +27,15 @@ public class Item : EntityBase
         }
         else
         {
-            if (canCloseUp)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                uI_CloseUp.SetCloseUp(itemSprite, itemName, itemDesc);
-                uI_CloseUp.Show();
+                if (canCloseUp)
+                {
+                    uI_CloseUp.SetCloseUp(itemSprite, itemName, itemDesc);
+                    uI_CloseUp.Show();
+                }
+                hasCollected = true;
             }
-            hasCollected = true;
         }
     }
 
