@@ -18,6 +18,7 @@ public class DialogSystem : GameKitComponent
     private bool isOptionShowing = false;
     private bool isInSelection = false;
     private bool isTextShowing = false;
+    public  bool isDialoging;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class DialogSystem : GameKitComponent
 
     public void StartDialog(string title, string dialogText)
     {
+        isDialoging = true;
         Debug.Log($"Start Dialog");
         isTextShowing = false;
         dialogTree = DialogManager.instance.CreateTree(title, dialogText);
@@ -227,6 +229,7 @@ public class DialogSystem : GameKitComponent
 
     private void ReachTheEndOfConversation()
     {
+        isDialoging = false;
         Debug.Log("Reach The End Of Conversation.");
         dialogTree.Clear();
         dialogTree = null;

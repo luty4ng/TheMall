@@ -24,9 +24,9 @@ public class Exit : EntityBase
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
         if (NumItem == 3)
         {
-            if (dialogAsset != null)
-                dialogSystem.StartDialog(Response.title, Response.contents);
-            onInteract?.Invoke();
+            Debug.Log(dialogSystem.isDialoging);
+            if (dialogAsset != null)dialogSystem.StartDialog(Response.title, Response.contents);
+            if(dialogSystem.isDialoging == false)onInteract?.Invoke();
         }
     }
 }

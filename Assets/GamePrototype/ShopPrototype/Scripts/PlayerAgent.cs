@@ -13,6 +13,7 @@ public class PlayerAgent : MonoBehaviour
     private DialogSystem dialogSystem;
     private IInteractive currentEntity;
     private UI_Bubble uI_Bubble;
+    private GameObject currentExit;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();

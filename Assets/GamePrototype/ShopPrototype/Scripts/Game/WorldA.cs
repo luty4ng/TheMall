@@ -12,9 +12,17 @@ public class WorldA : MonoBehaviour
         foreach (var renderer in renderers)
         {
             renderer.sortingLayerName = "WorldA";
-            if (renderer.gameObject.name != "BKG")
+            if (renderer.gameObject.name == "BKG")
+            {
+                renderer.sortingOrder = -1;
+            }
+            else if(renderer.gameObject.name == "Player")
             {
                 renderer.sortingOrder = 1;
+            }
+            else
+            {
+                renderer.sortingOrder = 0;
             }
         }
     }
