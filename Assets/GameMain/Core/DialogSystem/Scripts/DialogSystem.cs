@@ -230,6 +230,7 @@ public class DialogSystem : GameKitComponent
     private void ReachTheEndOfConversation()
     {
         isDialoging = false;
+        Debug.Log(isDialoging);
         Debug.Log("Reach The End Of Conversation.");
         dialogTree.Clear();
         dialogTree = null;

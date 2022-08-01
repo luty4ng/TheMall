@@ -29,4 +29,13 @@ public class Exit : EntityBase
             if(dialogSystem.isDialoging == false)onInteract?.Invoke();
         }
     }
+
+    public override void OnPassExit()
+    {
+        if (NumItem == 3)
+        {
+            Debug.Log(dialogSystem.isDialoging);
+            if (dialogSystem.isDialoging == false) onInteract?.Invoke();
+        }
+    }
 }
