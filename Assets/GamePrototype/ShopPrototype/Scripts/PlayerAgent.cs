@@ -14,6 +14,8 @@ public class PlayerAgent : MonoBehaviour
     private IInteractive currentEntity;
     private UI_Bubble uI_Bubble;
     private GameObject currentExit;
+    public Animator anim;
+    private bool facingRight = true;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
@@ -23,7 +25,10 @@ public class PlayerAgent : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
+        anim.SetFloat("Speed", Mathf.Abs(horizontal));
         transform.Translate(movement);
+        if (horizontal > 0 && !facingRight) flip();
+        if (horizontal < 0 && facingRight) flip();
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -71,5 +76,13 @@ public class PlayerAgent : MonoBehaviour
             currentEntity?.OnPassExit();
             uI_Bubble.Hide();
         }
+    }
+
+    void flip() 
+    {
+        Vector3 currentScale = this.gameObject.transform.localScale;
+        currentScale.x *= -1;
+        this.gameObject.transform.localScale = currentScale;
+        facingRight = !facingRight;
     }
 }
