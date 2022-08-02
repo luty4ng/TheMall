@@ -10,6 +10,7 @@ public class Item : EntityBase
     public string itemName;
     public bool canCloseUp = true;
     public bool hasClicked = false;
+    public bool canChangeSprite = false;
 
     [TextArea(30, 100)] public string itemDesc;
     public override void OnInteract()
@@ -37,6 +38,8 @@ public class Item : EntityBase
                 hasCollected = true;
             }
         }
+
+        if (canChangeSprite) this.transform.gameObject.GetComponent<SpriteRenderer>().sprite = itemSprite;
     }
 
     public override void OnPassExit()

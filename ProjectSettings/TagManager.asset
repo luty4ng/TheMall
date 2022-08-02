@@ -7,6 +7,7 @@ TagManager:
   - Collective
   - Window
   - Exit
+  - Character
   layers:
   - Default
   - TransparentFX

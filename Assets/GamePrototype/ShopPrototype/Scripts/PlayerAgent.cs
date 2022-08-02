@@ -41,6 +41,8 @@ public class PlayerAgent : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             IInteractive hitComponent = CursorManager.current.TryGetHitComponent<IInteractive>();
+            var temp = CursorManager.current.TryGetHitGameObject();
+            Debug.Log(temp);
             if (hitComponent != null)
             {
                 hitComponent?.OnInteract();
@@ -59,7 +61,7 @@ public class PlayerAgent : MonoBehaviour
             currentEntity.OnPassEnter();
             if (other.transform.GetComponent<Item>().hasClicked)  uI_Bubble.Show();
         }
-        if (other?.tag == "Exit")
+        if (other?.tag == "Exit" || other?.tag == "Character")
         {
             currentEntity = other.GetComponent<IInteractive>();
             currentEntity.OnPassEnter();
@@ -69,7 +71,7 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Collective" || other.tag == "Exit")
+        if (other.tag == "Collective" || other.tag == "Exit" || other.tag == "Character")
         {
             if (currentEntity == null)
                 currentEntity = other.GetComponent<IInteractive>();
