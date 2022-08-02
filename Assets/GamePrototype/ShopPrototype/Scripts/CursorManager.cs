@@ -8,7 +8,8 @@ public class CursorManager : MonoSingletonBase<CursorManager>
     public static Vector3 MAGIC_VECTOR = Vector3.zero;
     public RaycastHit2D hitInfo;
     public LayerMask interactiveLayer;
-
+    private Vector3 originPos;
+    private Vector3 diretcion;
     private void Start()
     {
         Enable();
@@ -18,8 +19,8 @@ public class CursorManager : MonoSingletonBase<CursorManager>
     {
         if (IsActive)
         {
-            Vector3 originPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10));
-            Vector3 diretcion = Camera.main.transform.forward;
+            originPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10));
+            diretcion = Camera.main.transform.forward;
             this.hitInfo = Physics2D.Raycast(originPos, diretcion, 10, interactiveLayer);
         }
     }
@@ -49,10 +50,10 @@ public class CursorManager : MonoSingletonBase<CursorManager>
         if (!IsActive)
         {
             Utility.Debugger.LogWarning("CursorSystem Is Not Activate.");
-            return null;    
+            return null;
         }
 
-        if (!IsActive || hitInfo.transform == null || hitInfo.transform.gameObject == null)
+        if (hitInfo.transform == null || hitInfo.transform.gameObject == null)
         {
             Utility.Debugger.LogWarning("No Hit Target Exsit.");
             return null;
@@ -64,5 +65,18 @@ public class CursorManager : MonoSingletonBase<CursorManager>
             return null;
         }
         return component;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (Application.isPlaying)
+        {
+
+            if (hitInfo.transform != null)
+                Gizmos.color = Color.green;
+            else
+                Gizmos.color = Color.red;
+            Gizmos.DrawLine(originPos, originPos + diretcion * 40);
+        }
     }
 }
