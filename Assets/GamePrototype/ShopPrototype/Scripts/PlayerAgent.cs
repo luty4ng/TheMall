@@ -48,9 +48,6 @@ public class PlayerAgent : MonoBehaviour
                 hitComponent?.OnInteract();
             }
         }
-
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)

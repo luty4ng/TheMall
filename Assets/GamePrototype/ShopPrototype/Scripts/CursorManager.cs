@@ -52,7 +52,7 @@ public class CursorManager : MonoSingletonBase<CursorManager>
             return null;    
         }
 
-        if (!IsActive || hitInfo.transform == null || hitInfo.transform.gameObject == null)
+        if (hitInfo.transform == null || hitInfo.transform.gameObject == null)
         {
             Utility.Debugger.LogWarning("No Hit Target Exsit.");
             return null;
