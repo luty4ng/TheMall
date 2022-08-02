@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 907332837
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9df0f4d8c02014347ad2d7de427e0ced, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -126,4 +126,6 @@ MonoBehaviour:
   hasCollected: 0
   itemSprite: {fileID: 21300000, guid: 9df0f4d8c02014347ad2d7de427e0ced, type: 3}
   itemName: "\u4E94\u89D2\u661F"
+  canCloseUp: 1
+  hasClicked: 0
   itemDesc: "\u8FD9\u73A9\u610F\u662F\u4E2A\u4E94\u89D2\u661F"

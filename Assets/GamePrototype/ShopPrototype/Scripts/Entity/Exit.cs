@@ -8,6 +8,7 @@ public class Exit : EntityBase
     public static int NumItem;
     public UnityEvent onInteract;
     public DialogAsset Response;
+    public bool Exitable;
     protected override void OnStart()
     {
         base.OnStart();
@@ -22,7 +23,7 @@ public class Exit : EntityBase
     {
         if (dialogAsset != null)
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
-        if (NumItem == 3)
+        if (NumItem == 3 || Exitable )
         {
             Debug.Log(dialogSystem.isDialoging);
             if (dialogAsset != null)dialogSystem.StartDialog(Response.title, Response.contents);
@@ -32,7 +33,7 @@ public class Exit : EntityBase
 
     public override void OnPassExit()
     {
-        if (NumItem == 3)
+        if (NumItem == 3 || Exitable)
         {
             Debug.Log(dialogSystem.isDialoging);
             if (dialogSystem.isDialoging == false) onInteract?.Invoke();
