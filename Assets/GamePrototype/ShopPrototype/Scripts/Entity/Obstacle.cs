@@ -5,9 +5,22 @@ using UnityEngine;
 public class Obstacle : EntityBase
 {
     public Sprite OpenState;
+    public bool canOpen = false;
+
+    private void Start()
+    {
+        var ChildColliders = this.transform.gameObject.GetComponentsInChildren<BoxCollider2D>();
+        for (var i = 1; i < ChildColliders.Length; i++) ChildColliders[i].enabled = false;
+    }
+   
     public override void OnInteract()
     {
-        this.transform.gameObject.GetComponent<SpriteRenderer>().sprite = OpenState;
-        this.transform.gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        if (canOpen)
+        {
+            this.transform.gameObject.GetComponent<SpriteRenderer>().sprite = OpenState;
+            var ChildColliders = this.transform.gameObject.GetComponentsInChildren<BoxCollider2D>();
+            foreach (BoxCollider2D Box in ChildColliders) Box.enabled = true;
+        }
+        
     }
 }

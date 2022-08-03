@@ -13,14 +13,11 @@ public class Exit : EntityBase
     {
         base.OnStart();
         NumItem = 0;
-    }
 
-    void Update()
-    {
     }
-
     public override void OnInteract()
     {
+        SetOpen();
         if (dialogAsset != null)
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
         if (NumItem == 3 || Exitable )
@@ -37,6 +34,15 @@ public class Exit : EntityBase
         {
             Debug.Log(dialogSystem.isDialoging);
             if (dialogSystem.isDialoging == false) onInteract?.Invoke();
+        }
+    }
+
+    public void SetOpen()
+    {
+        GameObject[] Obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+        foreach (GameObject obstacle in Obstacles)
+        {
+           obstacle.GetComponent<Obstacle>().canOpen = true;
         }
     }
 }
