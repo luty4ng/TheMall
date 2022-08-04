@@ -7,4 +7,5 @@ public interface IInteractive
     void OnPassExit();
     void OnInteract();
     void OnDestroy();
+    void OnUpdate();
 }

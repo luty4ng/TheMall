@@ -1,17 +1,16 @@
 using UnityEngine;
 
-public class WorldB : MonoBehaviour
+public class World : MonoBehaviour
 {
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
+    public string WorldName;
+    public int RoomId;
     private void Start()
     {
         SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        EntityBase[] entities = GetComponentsInChildren<EntityBase>();
         foreach (var renderer in renderers)
         {
-            renderer.sortingLayerName = "WorldB";
+            renderer.sortingLayerName = WorldName;
             if (renderer.gameObject.name == "BKG")
             {
                 renderer.sortingOrder = -1;
@@ -25,5 +24,15 @@ public class WorldB : MonoBehaviour
                 renderer.sortingOrder = 0;
             }
         }
+
+        for (int i = 0; i < entities.Length; i++)
+        {
+            entities[i].BelongWorld = WorldName;
+        }
+    }
+    public enum RoomNum
+    {
+        room1 = 1,
+        room2 = 2
     }
 }

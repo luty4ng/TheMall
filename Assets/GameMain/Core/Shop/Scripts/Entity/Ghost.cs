@@ -25,4 +25,6 @@ public class Ghost : MonoBehaviour
         if (other.CompareTag("Player")) 
         { Debug.Log("Gotcha"); }
     }
+
+    
 }

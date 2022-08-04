@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameKit;
+using System.Linq;
 
 public class PlayerAgent : MonoBehaviour
 {
@@ -16,10 +17,12 @@ public class PlayerAgent : MonoBehaviour
     private GameObject currentExit;
     public Animator anim;
     private bool facingRight = true;
+    private List<SpriteRenderer> allSpriteRenderers;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
         uI_Bubble = UIManager.instance.GetUI<UI_Bubble>("UI_Bubble");
+        allSpriteRenderers = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
     }
     void Update()
     {
@@ -55,7 +58,7 @@ public class PlayerAgent : MonoBehaviour
         {
             currentEntity = other.GetComponent<IInteractive>();
             currentEntity.OnPassEnter();
-            if (other.transform.GetComponent<Item>().hasClicked)  uI_Bubble.Show();
+            if (other.transform.GetComponent<Item>().hasClicked) uI_Bubble.Show();
         }
         if (other?.tag == "Exit" || other?.tag == "Character")
         {
@@ -76,11 +79,28 @@ public class PlayerAgent : MonoBehaviour
         }
     }
 
-    void flip() 
+    void flip()
     {
         Vector3 currentScale = this.gameObject.transform.localScale;
         currentScale.x *= -1;
         this.gameObject.transform.localScale = currentScale;
         facingRight = !facingRight;
+    }
+
+    public void SetWorld(string worldName)
+    {
+        for (int i = 0; i < allSpriteRenderers.Count; i++)
+        {
+            allSpriteRenderers[i].sortingLayerName = worldName;
+        }
+    }
+
+
+    public void SwitchWorld()
+    {
+        if (allSpriteRenderers.First().sortingLayerName == "WorldA")
+            SetWorld("WorldB");
+        else if (allSpriteRenderers.First().sortingLayerName == "WorldB")
+            SetWorld("WorldA");
     }
 }

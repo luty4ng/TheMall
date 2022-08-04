@@ -29,7 +29,7 @@ public class CursorManager : MonoSingletonBase<CursorManager>
     {
         if (!IsActive || hitInfo.transform == null || hitInfo.transform.gameObject == null)
         {
-            Utility.Debugger.LogWarning("No Hit Target Exsit.");
+            // Utility.Debugger.LogWarning("No Hit Target Exsit.");
             return MAGIC_VECTOR;
         }
         return this.hitInfo.point;
@@ -39,7 +39,7 @@ public class CursorManager : MonoSingletonBase<CursorManager>
     {
         if (!IsActive || hitInfo.transform == null || hitInfo.transform.gameObject == null)
         {
-            Utility.Debugger.LogWarning("No Hit Target Exsit.");
+            // Utility.Debugger.LogWarning("No Hit Target Exsit.");
             return null;
         }
         return this.hitInfo.transform.gameObject;
@@ -55,7 +55,7 @@ public class CursorManager : MonoSingletonBase<CursorManager>
 
         if (hitInfo.transform == null || hitInfo.transform.gameObject == null)
         {
-            Utility.Debugger.LogWarning("No Hit Target Exsit.");
+            // Utility.Debugger.LogWarning("No Hit Target Exsit.");
             return null;
         }
         T component = hitInfo.transform.GetComponent<T>();

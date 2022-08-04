@@ -20,8 +20,8 @@ public class Item : EntityBase
             if (Input.GetKeyDown(KeyCode.E))
                 return;
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
-            if (canCloseUp) 
-            { 
+            if (canCloseUp)
+            {
                 hasClicked = true;
                 Exit.NumItem++;
             };
@@ -50,5 +50,10 @@ public class Item : EntityBase
             uI_CloseUp.Hide();
             OnDestroy();
         }
+    }
+
+    private void Update()
+    {
+        OnUpdate();
     }
 }

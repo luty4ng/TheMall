@@ -9,11 +9,11 @@ public class Exit : EntityBase
     public UnityEvent onInteract;
     public DialogAsset Response;
     public bool Exitable;
+
     protected override void OnStart()
     {
         base.OnStart();
         NumItem = 0;
-
     }
     public override void OnInteract()
     {
@@ -44,5 +44,13 @@ public class Exit : EntityBase
         {
            obstacle.GetComponent<Obstacle>().canOpen = true;
         }
+    }
+
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    private void Update()
+    {
+        OnUpdate();
     }
 }
