@@ -22,7 +22,7 @@ public class Interval : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
     private Ticker_Auto ticker;
     [SerializeField] private float activateTime = 2f;
-    [SerializeField] private float activateDistanceOffset = 2f;
+    [SerializeField] private float activateDistanceOffset = 2.5f;
 
     private void Start()
     {
