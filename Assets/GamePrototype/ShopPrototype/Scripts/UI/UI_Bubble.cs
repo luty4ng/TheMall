@@ -18,9 +18,9 @@ public class UI_Bubble : UIGroup
 
     private void Update()
     {
-        Vector3 current_locale = this.transform.position;
-        current_locale.x = Player.position.x;
-        this.transform.position = current_locale;
+        Vector3 current_pos = this.transform.position;
+        current_pos.x = Player.position.x;
+        this.transform.position = current_pos;
     }
     public override void Show(UnityAction callback = null)
     {

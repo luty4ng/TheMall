@@ -5,6 +5,7 @@ using UnityEngine;
 public class Teleporter : MonoBehaviour
 {
     [SerializeField] private Transform Destination;
+    [SerializeField] private Transform Destination2;
     [SerializeField] private Transform player;
     [SerializeField] private float transitionTime = .1f;
     [SerializeField] private Animator anim;

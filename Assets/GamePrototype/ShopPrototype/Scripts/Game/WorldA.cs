@@ -26,4 +26,9 @@ public class WorldA : MonoBehaviour
             }
         }
     }
+    public enum RoomNum
+    {
+        room1= 1,
+        room2 = 2
+    }
 }
