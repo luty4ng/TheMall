@@ -1,11 +1,15 @@
 using UnityEngine;
+using GameKit;
 
 public class World : MonoBehaviour
 {
     public string WorldName;
     public int RoomId;
+    private DialogSystem dialogSystem;
+    public DialogAsset dialogAsset;
     private void Start()
     {
+        dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
         SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
         EntityBase[] entities = GetComponentsInChildren<EntityBase>();
         foreach (var renderer in renderers)
@@ -30,9 +34,15 @@ public class World : MonoBehaviour
             entities[i].BelongWorld = WorldName;
         }
     }
-    public enum RoomNum
+    public enum Room_Name
     {
-        room1 = 1,
-        room2 = 2
+        Hallway = 1,
+        Director = 2,
+        Shop = 3,
+        Orphanage = 4,
+        MainCafe = 5,
+        Storage = 6,
+        Basement = 7,
+        Secret = 8
     }
 }

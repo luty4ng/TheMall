@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
-  m_Name: "\u5BFC\u6F14\u7684\u8BDD"
+  m_Name: "\u5408\u5F71\u7684\u8BDD"
   m_EditorClassIdentifier: 
-  title: Director's words
-  contents: "\u5C0F\u660E\uFF1A\u6742\u7269\u5BA4\uFF1F\u54E6\u5C31\u662F\u4E00\u5C42\u5927\u5385\u7684\u90A3\u4E2A\u5C0F\u623F\u95F4\u3002\n\u5C0F\u660E\uFF1A\u522B\u5FD8\u4E86\u53BB\u5730\u4E0B\u5BA4\u53EB\u738B\u5A46\u554A\u3002\r\n"
+  title: Photo's words
+  contents: "\u65C1\u767D\uFF1A\u6CDB\u9EC4\u7684\u5408\u5F71\u7167\u7247\uFF0C\u91CC\u9762\u4F3C\u4E4E\u6709\u719F\u6089\u7684\u8EAB\u5F71\u3002\r\n"

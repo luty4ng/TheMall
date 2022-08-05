@@ -18,6 +18,7 @@ public class PlayerAgent : MonoBehaviour
     public Animator anim;
     private bool facingRight = true;
     private List<SpriteRenderer> allSpriteRenderers;
+    public World currentWorld;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
@@ -50,6 +51,11 @@ public class PlayerAgent : MonoBehaviour
                 hitComponent?.OnInteract();
             }
         }
+
+        //switch (currentWorld.RoomId)
+       // {
+           // case World.Room_Name.
+       // }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

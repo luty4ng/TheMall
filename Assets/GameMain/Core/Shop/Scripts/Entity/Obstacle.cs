@@ -20,6 +20,7 @@ public class Obstacle : EntityBase
             this.transform.gameObject.GetComponent<SpriteRenderer>().sprite = OpenState;
             var ChildColliders = this.transform.gameObject.GetComponentsInChildren<BoxCollider2D>();
             foreach (BoxCollider2D Box in ChildColliders) Box.enabled = true;
+            if (dialogAsset != null) dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
         }
 
     }

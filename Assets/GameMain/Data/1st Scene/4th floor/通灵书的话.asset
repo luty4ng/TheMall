@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
-  m_Name: "\u5BFC\u6F14\u7684\u8BDD"
+  m_Name: "\u901A\u7075\u4E66\u7684\u8BDD"
   m_EditorClassIdentifier: 
-  title: Director's words
-  contents: "\u5C0F\u660E\uFF1A\u6742\u7269\u5BA4\uFF1F\u54E6\u5C31\u662F\u4E00\u5C42\u5927\u5385\u7684\u90A3\u4E2A\u5C0F\u623F\u95F4\u3002\n\u5C0F\u660E\uFF1A\u522B\u5FD8\u4E86\u53BB\u5730\u4E0B\u5BA4\u53EB\u738B\u5A46\u554A\u3002\r\n"
+  title: Book's words
+  contents: "\u65C1\u767D\uFF1A\u4F3C\u4E4E\u662F\u4E00\u672C\u5F88\u53E4\u65E7\u7684\u4E66\uFF0C\u8BB0\u5F55\u4E86\u4EC0\u4E48\u4E1C\u897F......"
