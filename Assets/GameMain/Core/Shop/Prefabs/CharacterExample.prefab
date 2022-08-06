@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8320392714367226556}
   m_Layer: 6
   m_Name: CharacterExample
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,14 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d97f6239c90304fadf2a99e8092aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uI_CloseUp: {fileID: 0}
-  dialogSystem: {fileID: 0}
   dialogAsset: {fileID: 11400000, guid: 7ec77ca4d21d65f4fa34773383784986, type: 2}
   BelongWorld: None
   boxCollider2D: {fileID: 0}
-  floor: {fileID: 0}
-  interval: {fileID: 0}
-  changeSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   onInteract:
     m_PersistentCalls:
       m_Calls: []

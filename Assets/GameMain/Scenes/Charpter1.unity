@@ -2036,7 +2036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371722690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.10638, y: 12.001915, z: -24.965961}
+  m_LocalPosition: {x: -13.131048, y: 12.002462, z: -24.965961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1412799195}
@@ -3776,7 +3776,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1297085663}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 13.25
@@ -3800,7 +3800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579222773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.6, y: 21.24, z: -24.965961}
+  m_LocalPosition: {x: -16.4407, y: 18.035599, z: -24.965961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 197946760}
@@ -4622,7 +4622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8606480711659090408, guid: a5b6e3ae8939f9f4d8d9d0f7f8e771f6, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Collective
       objectReference: {fileID: 0}
     - target: {fileID: 8606480711659090410, guid: a5b6e3ae8939f9f4d8d9d0f7f8e771f6, type: 3}
       propertyPath: m_RootOrder
@@ -5695,7 +5695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8606480711659090408, guid: a5b6e3ae8939f9f4d8d9d0f7f8e771f6, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Collective
       objectReference: {fileID: 0}
     - target: {fileID: 8606480711659090410, guid: a5b6e3ae8939f9f4d8d9d0f7f8e771f6, type: 3}
       propertyPath: m_RootOrder
@@ -11521,7 +11521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   anim: {fileID: 2119148435}
-  currentWorld: 
+  currentWorld: WorldA
 --- !u!95 &2119148435
 Animator:
   serializedVersion: 3

@@ -24,7 +24,6 @@ public class PlayerAgent : MonoBehaviour
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
         uI_Bubble = UIManager.instance.GetUI<UI_Bubble>("UI_Bubble");
         allSpriteRenderers = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
-        currentWorld = "WorldA";
     }
     void Update()
     {
@@ -47,10 +46,10 @@ public class PlayerAgent : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             IInteractive hitComponent = CursorManager.current.TryGetHitComponent<IInteractive>();
-            var temp = CursorManager.current.TryGetHitComponent<IInteractive>();
+            GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {
-                if (currentWorld == hitComponent.SBelongWorld || currentWorld == "None")
+                if ((currentWorld == hitComponent.SBelongWorld || currentWorld == "None") && hitObject.CompareTag("Collective"))
                     hitComponent?.OnInteract();
             }
         }

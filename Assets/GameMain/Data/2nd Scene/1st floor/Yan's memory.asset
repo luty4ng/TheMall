@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
+  m_Name: Yan's memory
+  m_EditorClassIdentifier: 
+  title: "\u5C0F\u7130\u7684\u56DE\u5FC6"
+  contents: "\u5C0F\u7130\uFF1A\uFF08\u695A\u96E8\u8679......\uFF09\r\n\u5C0F\u7130\uFF1A\uFF08\u6211\u4E0D\u81EA\u7531\u5730\u8FC8\u5F00\u4E86\u811A\u6B65\uFF09\r\n\u5C0F\u7130\uFF1A\uFF08\u60F3\u8981\u53BB\u8FFD\u4E0A\u90A3\u4E2A\u5DF2\u7136\u79BB\u53BB\u7684\u5979\uFF09\r\n\u5C0F\u7130\uFF1A\uFF08\u56DE\u5FC6\uFF0C\u5728\u524D\u8FDB\u7684\u7A7A\u95F4\u4E2D\u8086\u610F\u751F\u957F\u8D77\u6765\uFF09\r\n"
