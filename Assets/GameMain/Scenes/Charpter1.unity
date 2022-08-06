@@ -6933,7 +6933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactiveLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
 --- !u!4 &1106429674
 Transform:
   m_ObjectHideFlags: 0
