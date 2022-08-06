@@ -26,6 +26,7 @@ public class Interval : MonoBehaviour
     public string WorldName;
     public string WorldBName;
     public bool isMoving = false;
+    public Transform player;
 
     private void Start()
     {
@@ -121,5 +122,11 @@ public class Interval : MonoBehaviour
     private void PlaySound()
     {
 
+    }
+
+    public void changePosition()
+    {
+        transform.position = new Vector3(player.position.x+10,player.position.y,player.position.z);
+        
     }
 }

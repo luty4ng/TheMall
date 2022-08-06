@@ -24,6 +24,7 @@ public class Ghost : MonoBehaviour
             movement = new Vector3(Mathf.Sign(distance) * Time.deltaTime * speed, 0, 0);
             transform.Translate(movement);
         }
+        if(distance < 0) Destroy(this.gameObject); ;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

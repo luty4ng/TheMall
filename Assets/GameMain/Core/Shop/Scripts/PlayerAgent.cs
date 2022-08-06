@@ -79,6 +79,11 @@ public class PlayerAgent : MonoBehaviour
             currentEntity.OnPassEnter();
             uI_Bubble.Show();
         }
+        if (other?.tag == "Wall")
+        {
+            transform.Translate(-movement);
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D other)

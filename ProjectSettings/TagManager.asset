@@ -9,6 +9,7 @@ TagManager:
   - Exit
   - Character
   - Obstacle
+  - Wall
   layers:
   - Default
   - TransparentFX
