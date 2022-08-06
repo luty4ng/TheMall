@@ -9,7 +9,6 @@ public class Teleporter : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        Debug.Log(Destination.position);
         player.position = Destination.position;
     }
 

@@ -49,7 +49,7 @@ public class PlayerAgent : MonoBehaviour
             GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {
-                if ((currentWorld == hitComponent.SBelongWorld || currentWorld == "None") && hitObject.CompareTag("Collective"))
+                if ((currentWorld == hitComponent.SBelongWorld || currentWorld == "None"))
                     hitComponent?.OnInteract();
             }
         }
@@ -72,7 +72,6 @@ public class PlayerAgent : MonoBehaviour
         }
         if (other?.tag == "Exit" || other?.tag == "Character")
         {
-            Debug.Log(currentEntity);
             currentEntity = other.GetComponent<IInteractive>();
             if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
                 return;

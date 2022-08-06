@@ -7,6 +7,7 @@ public abstract class EntityBase : MonoBehaviour, IInteractive
     protected DialogSystem dialogSystem;
     [Header("第一次互动对话")]
     [SerializeField] protected DialogAsset dialogAsset;
+    protected bool HasFirstDialoged = false;
     private string m_Name;
     [Header("物品所属世界，由World脚本自动设置，商场的都是None")]
     public string BelongWorld = "None";
