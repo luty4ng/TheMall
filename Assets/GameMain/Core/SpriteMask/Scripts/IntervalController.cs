@@ -42,7 +42,7 @@ public class IntervalController : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            currentInterval.isMoving = false;
+            if(currentInterval != null)currentInterval.isMoving = false;
             currentInterval = null;
             IsFollowing = false;
         }

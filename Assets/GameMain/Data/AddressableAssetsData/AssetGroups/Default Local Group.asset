@@ -207,6 +207,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - DialogPack
+  - m_GUID: 51f3a660231aedf47b4deedfb3762dd5
+    m_Address: Assets/GameMain/Data/2nd Scene/1st floor/Ming's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 996d76fcd71648a48a75cff08ccd0215, type: 2}
   m_SchemaSet:
