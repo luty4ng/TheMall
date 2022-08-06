@@ -207,6 +207,86 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - DialogPack
+  - m_GUID: 51f3a660231aedf47b4deedfb3762dd5
+    m_Address: Assets/GameMain/Data/2nd Scene/1st floor/Ming's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 542da689da694bf43ae19684d8b5defa
+    m_Address: Assets/GameMain/Data/2nd Scene/1st floor/Yan's memory.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: ed8f1f73660030240b9f6c07f7f4d7a2
+    m_Address: Assets/GameMain/Data/2nd Scene/2nd floor/Three's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 6882b88839e5f994694c7a0dc6b05a32
+    m_Address: Assets/GameMain/Data/2nd Scene/2nd floor/Customer's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: fbd2cbfd99f3a664e9ba339f5224b442
+    m_Address: Assets/GameMain/Data/2nd Scene/2nd floor/Auntie Hong's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: db5c66f9fa7926e4cab3734fbde5ef42
+    m_Address: Assets/GameMain/Data/2nd Scene/2nd floor/Crowd's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 76ba67636b4b119419daea439ac60818
+    m_Address: Assets/GameMain/Data/2nd Scene/3rd floor/Caughtup's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 4075965eb275c4d4899193a2a43c5bf4
+    m_Address: Assets/GameMain/Data/2nd Scene/3rd floor/Meng's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: ee9d9a9cdd048e74f8e1f5f087d9eea1
+    m_Address: Assets/GameMain/Data/2nd Scene/3rd floor/Hong Staue's words.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 425e636caff9e764a926ce1cef5e8654
+    m_Address: Assets/GameMain/Data/2nd Scene/3rd floor/Poster 's words2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 5903ec5190d22774b94db978348421af
+    m_Address: Assets/GameMain/Data/2nd Scene/3rd floor/Ming's word2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 462115288cb20ed4eab7738d4ccb2287
+    m_Address: Assets/GameMain/Data/2nd Scene/4th floor/BodyPlace's words 2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 773ca01e130a5e141961da27ee89b1d7
+    m_Address: "Assets/GameMain/Data/2nd Scene/4th floor/\u4F5B\u7956\u7684\u8BDD2.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 38905f2e9f8624d4790299c65f2e9640
+    m_Address: "Assets/GameMain/Data/2nd Scene/4th floor/\u81EA\u5DF1\u7684\u5E7D\u7075\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: 7e57a1f9e464d0848baa23ceabaf144b
+    m_Address: Assets/GameMain/Data/2nd Scene/4th floor/BodyPlace's words3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
+  - m_GUID: d37bb906d2e32f84db461c50bf60ab68
+    m_Address: Assets/GameMain/Data/2nd Scene/4th floor/Yans' Confront.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DialogPack
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 996d76fcd71648a48a75cff08ccd0215, type: 2}
   m_SchemaSet:
