@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Collective
+  - Window
+  - Exit
+  - Character
+  - Obstacle
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - IntervalEntity
+  - Water
+  - UI
+  - Interactive
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: WorldA
+    uniqueID: 907332837
+    locked: 0
+  - name: ObstacleItem
+    uniqueID: 4250929301
+    locked: 0
+  - name: Obstacle
+    uniqueID: 4213790747
+    locked: 0
+  - name: WorldB
+    uniqueID: 2639084137
+    locked: 0
+  - name: Interval
+    uniqueID: 3521886381
+    locked: 0
+  - name: None
+    uniqueID: 2434298181
+    locked: 0

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
+  m_Name: "\u8679\u96D5\u50CF\u7684\u8BDD"
+  m_EditorClassIdentifier: 
+  title: Statue's words
+  contents: "\u65C1\u767D\uFF1A\u542C\u8BF4\u539F\u672C\u8FD9\u91CC\u662F\u4E00\u5EA7\u5B64\u513F\u9662\uFF0C\u800C\u9634\u9633\u773C\u7AE5\u5B50\u662F\u5B64\u513F\u9662\u7684\u62DB\u724C\u4EBA\u7269\uFF0C\u53EA\u53EF\u60DC\u90A3\u4E00\u573A\u5927\u706B\uFF0C\u628A\u4E00\u5207\u5316\u4E3A\u4E86\u865A\u65E0\u3002\r\n"
