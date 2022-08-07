@@ -9118,6 +9118,10 @@ PrefabInstance:
       propertyPath: betweenings.Array.data[0]
       value: 
       objectReference: {fileID: 1505750411}
+    - target: {fileID: 4354789231004033899, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4354789231050460657, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_Enabled
       value: 1

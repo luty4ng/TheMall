@@ -12,6 +12,8 @@ public class CharacterManager : EntityBase
     [SerializeField] protected DialogAsset dialogAssetAfter;
     [Header("互动后回调方法")]
     public UnityEvent onInteract;
+    [Header("互动马上回调方法")]
+    public UnityEvent immediateInteract;
     protected override void OnStart()
     {
 
@@ -39,6 +41,7 @@ public class CharacterManager : EntityBase
                 dialogSystem.StartDialog(dialogAssetAfter.title, dialogAssetAfter.contents,()=> onInteract?.Invoke());
             }
         }
+        immediateInteract?.Invoke();
     }
 
     private void Update()
