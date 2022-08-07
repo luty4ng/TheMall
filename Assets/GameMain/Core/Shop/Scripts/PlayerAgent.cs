@@ -22,6 +22,7 @@ public class PlayerAgent : MonoBehaviour
     private bool facingRight = true;
     private List<SpriteRenderer> allSpriteRenderers;
     public string currentWorld;
+    public Transform camFollowPos;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
@@ -154,5 +155,10 @@ public class PlayerAgent : MonoBehaviour
         Vector2 detectCenter = (Vector2)this.transform.position + new Vector2(transform.localScale.x * collBoxCenter.x, collBoxCenter.y);
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(detectCenter, collBoxSize);
+    }
+
+    public void SetCamPosY(float yValue)
+    {
+        camFollowPos.localPosition = new Vector2(camFollowPos.localPosition.x, yValue);
     }
 }

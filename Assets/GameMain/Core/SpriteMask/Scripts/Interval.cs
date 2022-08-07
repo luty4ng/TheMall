@@ -126,7 +126,7 @@ public class Interval : MonoBehaviour
 
     public void changePosition()
     {
-        transform.position = new Vector3(player.position.x+10,player.position.y,player.position.z);
-        
+        transform.position = new Vector3(player.position.x + 10, player.position.y, player.position.z);
+
     }
 }
