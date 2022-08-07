@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
+  m_Name: "\u8D70\u5ECA\u5899\u7EB8\u7684\u8BDD"
+  m_EditorClassIdentifier: 
+  title: Paper's words
+  contents: "\u6742\u5DE5\uFF1A\u88AB\u6495\u788E\u7684\u5899\u7EB8\uFF0C\u6D77\u62A5\u4E0A\u7684\u56FE\u6848\u5982\u540C\u773C\u775B\u822C\u7D27\u76EF\u7740\u81EA\u5DF1\u3002\n"
