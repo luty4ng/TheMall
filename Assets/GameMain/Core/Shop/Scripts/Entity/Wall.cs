@@ -8,4 +8,8 @@ public class Wall : EntityBase
     {
         throw new System.NotImplementedException();
     }
+    private void Update()
+    {
+        OnUpdate();
+    }
 }
