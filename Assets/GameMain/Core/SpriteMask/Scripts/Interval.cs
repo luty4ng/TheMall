@@ -49,8 +49,8 @@ public class Interval : MonoBehaviour
         if (intervalType == IntervalType.Horizontal)
         {
             float substract = this.transform.position.x - initOffset;
-            maskA.transform.localScale = new Vector2(initScaleA + (substract / 10), maskA.transform.localScale.y);
-            maskB.transform.localScale = new Vector2(initScaleB - (substract / 10), maskB.transform.localScale.y);
+            maskA.transform.localScale = new Vector2(initScaleA + (substract / 10.2f), maskA.transform.localScale.y);
+            maskB.transform.localScale = new Vector2(initScaleB - (substract / 10.2f), maskB.transform.localScale.y);
 
             for (int i = 0; i < betweenings.Count; i++)
             {
