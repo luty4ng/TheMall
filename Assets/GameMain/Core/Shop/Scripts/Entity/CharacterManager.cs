@@ -12,6 +12,8 @@ public class CharacterManager : EntityBase
     [SerializeField] protected DialogAsset dialogAssetAfter;
     [Header("互动后回调方法")]
     public UnityEvent onInteract;
+    [Header("互动马上回调方法")]
+    public UnityEvent immediateInteract;
     protected override void OnStart()
     {
 
@@ -23,7 +25,14 @@ public class CharacterManager : EntityBase
         {
             if (dialogAsset != null)
             {
-                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+                if(dialogAssetAfter != null)
+                {
+                    dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+                }
+                else
+                {
+                    dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
+                }
                 HasFirstDialoged = true;
             }
         }
@@ -31,10 +40,11 @@ public class CharacterManager : EntityBase
         {
             if (dialogAssetAfter != null)
             {
-                dialogSystem.StartDialog(dialogAssetAfter.title, dialogAssetAfter.contents);
+                dialogSystem.StartDialog(dialogAssetAfter.title, dialogAssetAfter.contents,()=> onInteract?.Invoke());
             }
         }
-        onInteract?.Invoke();
+        immediateInteract?.Invoke();
+        Debug.Log("Hello");
     }
 
     private void Update()
