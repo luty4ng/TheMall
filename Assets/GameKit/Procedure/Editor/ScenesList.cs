@@ -31,6 +31,8 @@ public static class ScenesList
     public static void Assets_GameMain_Scenes_Charpter2_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter2.unity"); }
     [MenuItem("Scenes/Charpter3")]
     public static void Assets_GameMain_Scenes_Charpter3_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter3.unity"); }
+    [MenuItem("Scenes/Charpter4")]
+    public static void Assets_GameMain_Scenes_Charpter4_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter4.unity"); }
     [MenuItem("Scenes/DialogSystem_Prototype")]
     public static void Assets_GameMain_Scenes_DialogSystem_Prototype_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/DialogSystem_Prototype.unity"); }
     [MenuItem("Scenes/SpriteMask_Prototype")]
