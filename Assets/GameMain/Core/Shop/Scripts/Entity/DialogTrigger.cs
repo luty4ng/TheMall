@@ -10,6 +10,7 @@ public class DialogTrigger : MonoBehaviour
     private BoxCollider2D boxCollider2D;
     private DialogSystem dialogSystem;
     private bool hasTriggered;
+    public string currentWorld;
 
     private void Start()
     {
@@ -24,7 +25,15 @@ public class DialogTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            TriggerDialog();
+            PlayerAgent player = other.gameObject.GetComponent<PlayerAgent>();
+            if (player == null)
+            {
+                Utility.Debugger.LogFail("Dialog Trigger Can not Get PlayerAgent.");
+                return;
+            }
+
+            if (player.currentWorld == currentWorld)
+                TriggerDialog();
         }
     }
 
