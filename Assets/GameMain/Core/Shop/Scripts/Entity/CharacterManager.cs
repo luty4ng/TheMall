@@ -23,6 +23,11 @@ public class CharacterManager : EntityBase
         {
             if (dialogAsset != null)
             {
+                if(dialogAssetAfter == null)
+                {
+                    dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
+                    return;
+                }
                 dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
                 HasFirstDialoged = true;
             }
@@ -31,10 +36,9 @@ public class CharacterManager : EntityBase
         {
             if (dialogAssetAfter != null)
             {
-                dialogSystem.StartDialog(dialogAssetAfter.title, dialogAssetAfter.contents);
+                dialogSystem.StartDialog(dialogAssetAfter.title, dialogAssetAfter.contents,()=> onInteract?.Invoke());
             }
         }
-        onInteract?.Invoke();
     }
 
     private void Update()

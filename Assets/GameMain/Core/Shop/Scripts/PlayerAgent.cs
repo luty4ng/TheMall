@@ -80,7 +80,7 @@ public class PlayerAgent : MonoBehaviour
         }
         if (other?.tag == "Wall")
         {
-            transform.Translate(-movement);
+            horizontal *= -1;
         }
 
     }
