@@ -25,12 +25,14 @@ public class CharacterManager : EntityBase
         {
             if (dialogAsset != null)
             {
-                if(dialogAssetAfter == null)
+                if(dialogAssetAfter != null)
+                {
+                    dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+                }
+                else
                 {
                     dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
-                    return;
                 }
-                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
                 HasFirstDialoged = true;
             }
         }
@@ -42,6 +44,7 @@ public class CharacterManager : EntityBase
             }
         }
         immediateInteract?.Invoke();
+        Debug.Log("Hello");
     }
 
     private void Update()
