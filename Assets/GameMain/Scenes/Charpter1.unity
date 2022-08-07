@@ -931,7 +931,11 @@ MonoBehaviour:
   BelongWorld: None
   boxCollider2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  dialogAssetAfter: {fileID: 0}
   onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  immediateInteract:
     m_PersistentCalls:
       m_Calls: []
   AfterFind: {fileID: 11400000, guid: baee5401aa374cf4babcc9aa569b513d, type: 2}
@@ -1487,7 +1491,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 17890824}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &332193221
 SpriteRenderer:
@@ -1801,7 +1805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6547819819245612785, guid: c18fca04ad637499c98085bcaa0c88dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.9659605
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6547819819245612785, guid: c18fca04ad637499c98085bcaa0c88dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2118,7 +2122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371722690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1701965, y: 11.863097, z: -24.965961}
+  m_LocalPosition: {x: -3.1701965, y: 11.863097, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1412799195}
@@ -2902,6 +2906,7 @@ MonoBehaviour:
   BelongWorld: None
   boxCollider2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  dialogAssetAfter: {fileID: 0}
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -2917,6 +2922,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  immediateInteract:
+    m_PersistentCalls:
+      m_Calls: []
   DeadAuntieSprite: {fileID: 21300000, guid: 28865e3766dc95c45b0a5720af378d53, type: 3}
   isDead: 0
 --- !u!1001 &472896118
@@ -3934,7 +3942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579222773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.9307, y: 17.6656, z: -24.965961}
+  m_LocalPosition: {x: -15.9307, y: 17.6656, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 197946760}
@@ -4727,7 +4735,19 @@ MonoBehaviour:
   canCollect: 1
   AfterFirstInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 688347088}
+        m_TargetAssemblyTypeName: Budda, Assembly-CSharp
+        m_MethodName: LightUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   AfterCollect:
     m_PersistentCalls:
       m_Calls: []
@@ -8782,6 +8802,7 @@ MonoBehaviour:
   BelongWorld: None
   boxCollider2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  dialogAssetAfter: {fileID: 0}
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -8797,6 +8818,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  immediateInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1414446258
 GameObject:
   m_ObjectHideFlags: 0
@@ -11751,6 +11775,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   anim: {fileID: 2119148435}
+  collBoxSize: {x: 1, y: 2}
+  collBoxCenter: {x: 1.62, y: 3}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 128
   currentWorld: WorldA
 --- !u!95 &2119148435
 Animator:
@@ -11924,7 +11953,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 81517229febcbd7438dc78ba2e77002e, type: 2}
     - target: {fileID: 8339370033312512088, guid: 13e21fefa331fa04888f8938f8528ffe, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8339370033312512088, guid: 13e21fefa331fa04888f8938f8528ffe, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -12307,7 +12336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7668303056235012318, guid: 91fceffa040ad664ca6f02821012a66e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7668303056235012318, guid: 91fceffa040ad664ca6f02821012a66e, type: 3}
       propertyPath: m_LocalScale.x
