@@ -16,6 +16,9 @@ public class PlayerAgent : MonoBehaviour
     private UI_Bubble uI_Bubble;
     private GameObject currentExit;
     public Animator anim;
+    public Vector2 collBoxSize;
+    public Vector2 collBoxCenter;
+    public LayerMask wallLayer;
     private bool facingRight = true;
     private List<SpriteRenderer> allSpriteRenderers;
     public string currentWorld;
@@ -27,6 +30,16 @@ public class PlayerAgent : MonoBehaviour
     }
     void Update()
     {
+        Vector2 detectCenter = (Vector2)this.transform.position + new Vector2(transform.localScale.x * collBoxCenter.x, collBoxCenter.y);
+        if (Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
+            anim.SetFloat("Speed", Mathf.Abs(horizontal));
+            transform.Translate(movement);
+        }
+        if (horizontal > 0 && !facingRight) flip();
+        if (horizontal < 0 && facingRight) flip();
         horizontal = Input.GetAxisRaw("Horizontal");
         movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
         anim.SetFloat("Speed", Mathf.Abs(horizontal));
@@ -136,4 +149,10 @@ public class PlayerAgent : MonoBehaviour
         currentWorld = "None";
     }
 
+    private void OnDrawGizmos()
+    {
+        Vector2 detectCenter = (Vector2)this.transform.position + new Vector2(transform.localScale.x * collBoxCenter.x, collBoxCenter.y);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(detectCenter, collBoxSize);
+    }
 }
