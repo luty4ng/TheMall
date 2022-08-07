@@ -52,6 +52,7 @@ public class Exit : EntityBase
 
     public void EnableExit()
     {
+        GameKit.Utility.Debugger.LogSuccess("开启通道");
         Exitable = true;
     }
 
