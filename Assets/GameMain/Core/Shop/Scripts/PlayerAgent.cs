@@ -23,6 +23,7 @@ public class PlayerAgent : MonoBehaviour
     private List<SpriteRenderer> allSpriteRenderers;
     public string currentWorld;
     public Transform camFollowPos;
+    public string currentFloor;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
@@ -134,6 +135,11 @@ public class PlayerAgent : MonoBehaviour
             allSpriteRenderers[i].maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         }
         currentWorld = worldName;
+    }
+
+    public void SetFloor(string FloorName)
+    {
+        currentFloor = FloorName;
     }
 
 

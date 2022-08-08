@@ -323,6 +323,10 @@ MonoBehaviour:
     m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u690D\u7269\u7684\u8BDD.asset"
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f9dbe232f3c3fe64ba0037fc87cb5fbe
+    m_Address: Assets/GameMain/Core/Shop/Data/Character/Customer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 996d76fcd71648a48a75cff08ccd0215, type: 2}
   m_SchemaSet:
