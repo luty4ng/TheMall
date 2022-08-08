@@ -67,9 +67,7 @@ public class DialogSystem : GameKitComponent
     {
         if (IsActive == false || dialogTree == null)
             return;
-
-        print(Callback);
-        
+                    
         if (!isOptionShowing && isInSelection)
         {
             if (Input.GetKeyDown(KeyCode.Space))
