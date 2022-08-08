@@ -82,7 +82,7 @@ public class PlayerAgent : MonoBehaviour
             if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
                 return;
             currentEntity.OnPassEnter();
-            if (other.transform.GetComponent<Item>().hasClicked) uI_Bubble.Show();
+            if (other.transform.GetComponent<Item>().hasClicked && other.transform.GetComponent<Item>().canCollect) uI_Bubble.Show();
         }
         if (other?.tag == "Exit" || other?.tag == "Character")
         {
