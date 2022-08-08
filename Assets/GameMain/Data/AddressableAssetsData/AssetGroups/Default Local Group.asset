@@ -95,8 +95,7 @@ MonoBehaviour:
   - m_GUID: 439c03c70c21729439d6f67127d19daf
     m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u7535\u8BDD\u7684\u8BDD.asset"
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - DialogPack
+    m_SerializedLabels: []
   - m_GUID: 6fda619d92248284aad81812c3d27d6c
     m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u5973\u4EBA\u5076\u7684\u8BDD.asset"
     m_ReadOnly: 0
@@ -306,6 +305,22 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 242b26765de3b8a448b755b2f755c1a1
     m_Address: "Assets/GameMain/Core/Shop/Data/\u5C0F\u718A\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 01d76cb8be4d81840a7c639b86e4255b
+    m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u7A7A\u8C03\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c54204f4d973ab74fa56d97fe1191311
+    m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u516C\u544A\u677F\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2fd7087c677315a4a828312f67db8473
+    m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u524D\u53F0\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ffc563cab0cc694bab5cb69d443fca1
+    m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u690D\u7269\u7684\u8BDD.asset"
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
