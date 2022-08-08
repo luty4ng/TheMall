@@ -4,6 +4,8 @@ using Febucci.UI;
 using GameKit.DataStructure;
 using GameKit;
 using UnityEngine.Events;
+using UnityEngine.PlayerLoop;
+
 [DisallowMultipleComponent]
 [AddComponentMenu("GameKit/Dialog System")]
 public class DialogSystem : GameKitComponent
@@ -32,7 +34,7 @@ public class DialogSystem : GameKitComponent
             this.characterPool = characterPool;
         });
     }
-
+    
     public void StartDialog(string title, string dialogText, UnityAction callback = null)
     {
         isDialoging = true;
@@ -66,6 +68,8 @@ public class DialogSystem : GameKitComponent
         if (IsActive == false || dialogTree == null)
             return;
 
+        print(Callback);
+        
         if (!isOptionShowing && isInSelection)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -240,6 +244,7 @@ public class DialogSystem : GameKitComponent
         dialogTree = null;
         uI_DialogSystem.Hide();
         ClearRecords();
+        Debug.Log(Callback);
         Callback?.Invoke();
         Callback = null;
     }

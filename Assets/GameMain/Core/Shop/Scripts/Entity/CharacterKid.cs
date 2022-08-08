@@ -9,7 +9,11 @@ public class CharacterKid : CharacterManager
         {
             floor.exitCondition.Exitable = true;
             if (dialogAsset != null && AfterFind != null)
+            {
                 dialogSystem.StartDialog(AfterFind.title, AfterFind.contents);
+                this.gameObject.SetActive(false);
+            }
+                
         }
         else
         {
@@ -17,6 +21,7 @@ public class CharacterKid : CharacterManager
                 dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
         }
         onInteract?.Invoke();
+        
     }
 
 }

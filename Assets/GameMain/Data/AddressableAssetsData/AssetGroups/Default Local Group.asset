@@ -300,6 +300,14 @@ MonoBehaviour:
     m_Address: "Assets/GameMain/Data/1st Scene/1st floor/\u6444\u5F71\u8BBE\u5907\u7684\u8BDD.asset"
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8ae3fdd4891f97f468298cf724937e54
+    m_Address: "Assets/GameMain/Core/Shop/Data/\u8863\u95F4\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 242b26765de3b8a448b755b2f755c1a1
+    m_Address: "Assets/GameMain/Core/Shop/Data/\u5C0F\u718A\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 996d76fcd71648a48a75cff08ccd0215, type: 2}
   m_SchemaSet:
