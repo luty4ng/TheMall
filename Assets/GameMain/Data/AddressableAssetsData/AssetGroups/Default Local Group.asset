@@ -327,6 +327,14 @@ MonoBehaviour:
     m_Address: Assets/GameMain/Core/Shop/Data/Character/Customer.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 05b894c6534ab7b488d84fa8a8c04329
+    m_Address: "Assets/GameMain/Data/1st Scene/4th floor/\u516B\u5366\u9635\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9679ca86b23e6cf4689f5376fc839ce7
+    m_Address: "Assets/GameMain/Data/1st Scene/4th floor/\u63D0\u793A\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 996d76fcd71648a48a75cff08ccd0215, type: 2}
   m_SchemaSet:

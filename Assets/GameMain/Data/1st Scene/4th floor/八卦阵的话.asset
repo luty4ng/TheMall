@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
-  m_Name: "\u4F5B\u8BF4"
+  m_Name: "\u516B\u5366\u9635\u7684\u8BDD"
   m_EditorClassIdentifier: 
-  title: Fo's words
-  contents: "\u6742\u5DE5\uFF1A\u4EE4\u4EBA\u98A4\u6296\u7684\u4E25\u8083\uFF0C\u76EE\u5149\u4E2D\u663E\u9732\u7740\u6012\u706B\u4E2D\u70E7\u3002\r\n"
+  title: Bagua's words
+  contents: "\u6742\u5DE5\uFF1A\u738B\u5A46\u753B\u7684\u9635\u6CD5\uFF0C\u8FD9\u79CD\u5C01\u5EFA\u8FF7\u4FE1\u771F\u7684\u6709\u7528\u5417\uFF1F"

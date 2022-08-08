@@ -9,6 +9,6 @@ public class character_animation : MonoBehaviour
     public void PlayExit()
     {
         print("nihao");
-        animator.Play("走路");
+        animator.Play("走路1");
     }
 }

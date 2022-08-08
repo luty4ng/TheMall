@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
-  m_Name: "\u4F5B\u8BF4"
+  m_Name: "\u8863\u67DC\u7684\u8BDD"
   m_EditorClassIdentifier: 
-  title: Fo's words
-  contents: "\u6742\u5DE5\uFF1A\u4EE4\u4EBA\u98A4\u6296\u7684\u4E25\u8083\uFF0C\u76EE\u5149\u4E2D\u663E\u9732\u7740\u6012\u706B\u4E2D\u70E7\u3002\r\n"
+  title: Closet's words
+  contents: "\u6742\u5DE5\uFF1A\u88AB\u70E7\u7126\u7684\u8863\u67DC\uFF0C\u4F3C\u4E4E\u662F\u5F88\u4E45\u4EE5\u524D\u7684\u5BB6\u5F53\u4E86\u3002"

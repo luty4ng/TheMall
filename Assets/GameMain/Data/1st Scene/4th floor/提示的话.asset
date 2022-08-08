@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
-  m_Name: "\u4F5B\u8BF4"
+  m_Name: "\u63D0\u793A\u7684\u8BDD"
   m_EditorClassIdentifier: 
-  title: Fo's words
-  contents: "\u6742\u5DE5\uFF1A\u4EE4\u4EBA\u98A4\u6296\u7684\u4E25\u8083\uFF0C\u76EE\u5149\u4E2D\u663E\u9732\u7740\u6012\u706B\u4E2D\u70E7\u3002\r\n"
+  title: hint's words
+  contents: "\u6742\u5DE5\uFF1A\u4E00\u4E2A\u76F4\u89C9\uFF0C\u8FD9\u4E2A\u7BA1\u9053\u6216\u8BB8\u80FD\u8FDE\u63A5\u5230\u4EC0\u4E48\u4E0D\u5F97\u4E86\u7684\u5BC6\u5BA4\n"
