@@ -1674,7 +1674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371722690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.167656, y: 11.863127, z: -24.965961}
+  m_LocalPosition: {x: -8.057768, y: 11.939074, z: -24.965961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4104,6 +4104,7 @@ MonoBehaviour:
   itemDesc: "\u8FD9\u662F\u4F5B\u50CF"
   hasClicked: 0
   light2D: {fileID: 0}
+  light2D2: {fileID: 0}
 --- !u!1001 &692864918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6879,6 +6880,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8030787132160621205, guid: d6c81d6b34a16124c8357e461194b087, type: 3}
   m_PrefabInstance: {fileID: 1198607850}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1202064993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202064994}
+  - component: {fileID: 1202064995}
+  m_Layer: 0
+  m_Name: DialogSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1202064994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202064993}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2104525957}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1202064995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202064993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8eba6e0f534b2408a139dc9db929a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDialoging: 0
 --- !u!1001 &1214422773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8056,7 +8101,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
+  facingRight: 1
   currentWorld: WorldA
+  camFollowPos: {fileID: 0}
 --- !u!95 &1340738635
 Animator:
   serializedVersion: 3
@@ -10077,6 +10124,8 @@ MonoBehaviour:
   onCaught:
     m_PersistentCalls:
       m_Calls: []
+  anim: {fileID: 0}
+  facingRight: 1
 --- !u!1 &1755890609
 GameObject:
   m_ObjectHideFlags: 0
@@ -11441,6 +11490,7 @@ Transform:
   - {fileID: 1113917851}
   - {fileID: 1106429674}
   - {fileID: 1703499724}
+  - {fileID: 1202064994}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
