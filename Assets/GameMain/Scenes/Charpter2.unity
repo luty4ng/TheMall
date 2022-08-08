@@ -1674,7 +1674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371722690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.057768, y: 11.939074, z: -24.965961}
+  m_LocalPosition: {x: -8.05817, y: 11.902769, z: -24.965961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2157,6 +2157,10 @@ PrefabInstance:
       propertyPath: Interval
       value: 
       objectReference: {fileID: 2010617197}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor3
+      objectReference: {fileID: 0}
     - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: exitCondition
       value: 
@@ -2921,6 +2925,10 @@ PrefabInstance:
       propertyPath: Interval
       value: 
       objectReference: {fileID: 1280138087}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor4
+      objectReference: {fileID: 0}
     - target: {fileID: 4833941747363873178, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.6
@@ -5068,6 +5076,10 @@ PrefabInstance:
       propertyPath: Interval
       value: 
       objectReference: {fileID: 1193807571}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor1
+      objectReference: {fileID: 0}
     - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: exitCondition
       value: 
@@ -8103,6 +8115,7 @@ MonoBehaviour:
     m_Bits: 0
   facingRight: 1
   currentWorld: WorldA
+  currentFloor: Floor1
   camFollowPos: {fileID: 0}
 --- !u!95 &1340738635
 Animator:
@@ -10126,6 +10139,7 @@ MonoBehaviour:
       m_Calls: []
   anim: {fileID: 0}
   facingRight: 1
+  isFading: 0
 --- !u!1 &1755890609
 GameObject:
   m_ObjectHideFlags: 0
@@ -11876,6 +11890,10 @@ PrefabInstance:
       propertyPath: Interval
       value: 
       objectReference: {fileID: 310961756}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor2
+      objectReference: {fileID: 0}
     - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: exitCondition
       value: 

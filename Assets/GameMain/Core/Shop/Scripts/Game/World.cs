@@ -13,6 +13,7 @@ public class World : MonoBehaviour
     public UnityEvent EnterEvent;
     private PlayerAgent player;
     private bool hasExecuted;
+    public bool Immediate = false;
     private void Start()
     {
         hasExecuted = false;
@@ -49,7 +50,7 @@ public class World : MonoBehaviour
     private void Update()
     {
         if (hasExecuted) return;
-        if (player.currentWorld == this.WorldName)
+        if (player.currentWorld == this.WorldName && player.currentFloor == GetComponentInParent<Floor>().FloorName)
         {
             StartCoroutine(EventTrigger(500));
         }
@@ -57,7 +58,7 @@ public class World : MonoBehaviour
 
     IEnumerator EventTrigger(float duration)
     {
-            yield return new WaitForSeconds(duration * Time.deltaTime);
+        if(!Immediate)yield return new WaitForSeconds(duration * Time.deltaTime);
             EnterEvent?.Invoke();
             hasExecuted = true;
     }

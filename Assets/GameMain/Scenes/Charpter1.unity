@@ -4602,6 +4602,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2010617197}
     - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: exitCondition
       value: 
       objectReference: {fileID: 738618051}
@@ -5533,6 +5537,10 @@ PrefabInstance:
       propertyPath: Interval
       value: 
       objectReference: {fileID: 1280138087}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor4
+      objectReference: {fileID: 0}
     - target: {fileID: 4833941747363873178, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.95
@@ -9598,6 +9606,10 @@ PrefabInstance:
       propertyPath: Interval
       value: 
       objectReference: {fileID: 1193807571}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor1
+      objectReference: {fileID: 0}
     - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: exitCondition
       value: 
@@ -17646,6 +17658,7 @@ MonoBehaviour:
         m_CallState: 2
   anim: {fileID: 0}
   facingRight: 1
+  isFading: 0
 --- !u!1 &1755890609
 GameObject:
   m_ObjectHideFlags: 0
@@ -20477,6 +20490,7 @@ MonoBehaviour:
     m_Bits: 128
   facingRight: 1
   currentWorld: WorldA
+  currentFloor: Floor1
   camFollowPos: {fileID: 1297085663}
 --- !u!95 &2119148435
 Animator:
@@ -21053,6 +21067,10 @@ PrefabInstance:
       propertyPath: Interval
       value: 
       objectReference: {fileID: 310961756}
+    - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: FloorName
+      value: Floor2
+      objectReference: {fileID: 0}
     - target: {fileID: 4804594719010305029, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: exitCondition
       value: 

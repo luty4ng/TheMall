@@ -13,6 +13,7 @@ public class Ghost : MonoBehaviour
     public UnityEvent onCaught;
     public Animator anim;
     public bool facingRight = true;
+    public bool isFading = false;
 
     // Update is called once per frame
     void Update()
@@ -25,9 +26,12 @@ public class Ghost : MonoBehaviour
         {
             movement = new Vector3(Mathf.Sign(Goal.position.x - transform.position.x) * Time.deltaTime * speed, 0, 0);
             transform.Translate(movement);
-            anim.SetFloat("Speed",Mathf.Abs(speed));
-            if (movement.x > 0 && !facingRight) flip();
-            if (movement.x < 0 && facingRight) flip();
+            if(anim != null)
+            {
+                anim.SetFloat("Speed", Mathf.Abs(speed));
+                if (movement.x > 0 && !facingRight) flip();
+                if (movement.x < 0 && facingRight) flip();
+            }
         }else  Destroy(this.gameObject);
     }
 

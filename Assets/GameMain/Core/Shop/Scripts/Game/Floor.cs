@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
+    public string FloorName;
     public Exit exitCondition;
     private Interval m_interval;
     public Interval Interval

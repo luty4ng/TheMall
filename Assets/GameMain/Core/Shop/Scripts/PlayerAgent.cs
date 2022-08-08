@@ -22,6 +22,7 @@ public class PlayerAgent : MonoBehaviour
     public bool facingRight = true;
     private List<SpriteRenderer> allSpriteRenderers;
     public string currentWorld;
+    public string currentFloor;
     public Transform camFollowPos;
     private void Start()
     {
@@ -32,17 +33,13 @@ public class PlayerAgent : MonoBehaviour
     void Update()
     {
         Vector2 detectCenter = (Vector2)this.transform.position + new Vector2(transform.localScale.x * collBoxCenter.x, collBoxCenter.y);
-        if (Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
+        if (!Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
         }
-        horizontal = Input.GetAxisRaw("Horizontal");
-        movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
-        anim.SetFloat("Speed", Mathf.Abs(horizontal));
-        transform.Translate(movement);
         if (horizontal > 0 && !facingRight) flip();
         if (horizontal < 0 && facingRight) flip();
 
@@ -128,6 +125,11 @@ public class PlayerAgent : MonoBehaviour
         currentWorld = worldName;
     }
 
+    public void SetFloor(string floorName)
+    {
+        currentFloor = floorName;   
+    }
+
 
     public void SwitchWorld(string WorldAName, string WorldBName)
     {
@@ -146,6 +148,7 @@ public class PlayerAgent : MonoBehaviour
             allSpriteRenderers[i].maskInteraction = SpriteMaskInteraction.None;
         }
         currentWorld = "None";
+        currentFloor = "None";
     }
 
     private void OnDrawGizmos()
