@@ -14,6 +14,7 @@ public class Ghost : MonoBehaviour
     public Animator anim;
     public bool facingRight = true;
     public bool isFading = false;
+    public bool canDestroy = true;
 
     // Update is called once per frame
     void Update()
@@ -32,7 +33,11 @@ public class Ghost : MonoBehaviour
                 if (movement.x > 0 && !facingRight) flip();
                 if (movement.x < 0 && facingRight) flip();
             }
-        }else  Destroy(this.gameObject);
+        }else
+        {
+            if (anim != null) anim.SetFloat("Speed", 0);
+            if (canDestroy) Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

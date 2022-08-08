@@ -55,7 +55,7 @@ public class Item : EntityBase
         {
             if (Input.GetKeyDown(KeyCode.E))
                 return;
-            dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+            if(dialogAsset != null)dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
             AfterFirstInteract?.Invoke();
             hasClicked = true;
             if (canCloseUp)
