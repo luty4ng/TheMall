@@ -3411,19 +3411,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6547819819245612785, guid: c18fca04ad637499c98085bcaa0c88dd, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< Updated upstream
-      value: -17.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6547819819245612785, guid: c18fca04ad637499c98085bcaa0c88dd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.5
-=======
       value: -14.7
       objectReference: {fileID: 0}
     - target: {fileID: 6547819819245612785, guid: c18fca04ad637499c98085bcaa0c88dd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 9.7
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6547819819245612785, guid: c18fca04ad637499c98085bcaa0c88dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3971,11 +3963,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371722690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< Updated upstream
-  m_LocalPosition: {x: 0.98947716, y: 11.872486, z: -10}
-=======
   m_LocalPosition: {x: 0.9905405, y: 11.872485, z: -10}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1412799195}
@@ -4543,11 +4531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4354789231050460670, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_AnchoredPosition.x
-<<<<<<< Updated upstream
-      value: -22.36
-=======
       value: -22.15
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4354789231278399940, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_IsActive
@@ -6489,11 +6473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579222773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< Updated upstream
-  m_LocalPosition: {x: -17.266586, y: 17.8356, z: -10}
-=======
   m_LocalPosition: {x: -14.5665865, y: 18.035599, z: -10}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 197946760}
@@ -13262,8 +13242,6 @@ MonoBehaviour:
 --- !u!1 &1208252566
 GameObject:
   m_ObjectHideFlags: 0
-<<<<<<< Updated upstream
-=======
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13336,7 +13314,6 @@ MonoBehaviour:
 --- !u!1001 &1214422773
 PrefabInstance:
   m_ObjectHideFlags: 0
->>>>>>> Stashed changes
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 435221567}
@@ -19314,8 +19291,6 @@ MonoBehaviour:
         m_CallState: 2
   anim: {fileID: 0}
   facingRight: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1751095263
 GameObject:
   m_ObjectHideFlags: 0
@@ -19388,7 +19363,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1755890609
 GameObject:
   m_ObjectHideFlags: 0
