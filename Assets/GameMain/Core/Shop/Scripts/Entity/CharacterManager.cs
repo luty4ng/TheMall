@@ -16,7 +16,7 @@ public class CharacterManager : EntityBase
     public UnityEvent immediateInteract;
     protected override void OnStart()
     {
-
+        base.OnStart();
     }
 
     public override void OnInteract()
@@ -25,16 +25,7 @@ public class CharacterManager : EntityBase
         {
             if (dialogAsset != null)
             {
-                if(dialogAssetAfter != null)
-                {
-                    print(1);
-                    dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
-                }
-                else
-                {
-                    print(2);
-                    dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
-                }
+                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
                 HasFirstDialoged = true;
             }
         }

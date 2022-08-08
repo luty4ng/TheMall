@@ -39,8 +39,6 @@ public class PlayerAgent : MonoBehaviour
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
         }
-        if (horizontal > 0 && !facingRight) flip();
-        if (horizontal < 0 && facingRight) flip();
         horizontal = Input.GetAxisRaw("Horizontal");
         movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
         anim.SetFloat("Speed", Mathf.Abs(horizontal));
