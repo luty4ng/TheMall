@@ -11,6 +11,8 @@ public class Ghost : MonoBehaviour
     private Vector3 movement;
     private bool isActive = false;
     public UnityEvent onCaught;
+    public Animator anim;
+    public bool facingRight = true;
 
     // Update is called once per frame
     void Update()
@@ -18,13 +20,15 @@ public class Ghost : MonoBehaviour
 
         if (!isActive)
             return;
-        distance = Goal.position.x - transform.position.x;
-        if (Mathf.Abs(distance) > 0)
+        distance = Mathf.Abs(Goal.position.x - transform.position.x);
+        if (distance > 0.3)
         {
-            movement = new Vector3(Mathf.Sign(distance) * Time.deltaTime * speed, 0, 0);
+            movement = new Vector3(Mathf.Sign(Goal.position.x - transform.position.x) * Time.deltaTime * speed, 0, 0);
             transform.Translate(movement);
-        }
-        if(distance < 0) Destroy(this.gameObject); ;
+            anim.SetFloat("Speed",Mathf.Abs(speed));
+            if (movement.x > 0 && !facingRight) flip();
+            if (movement.x < 0 && facingRight) flip();
+        }else  Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,5 +46,11 @@ public class Ghost : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-
+    void flip()
+    {
+        Vector3 currentScale = this.gameObject.transform.localScale;
+        currentScale.x *= -1;
+        this.gameObject.transform.localScale = currentScale;
+        facingRight = !facingRight;
+    }
 }

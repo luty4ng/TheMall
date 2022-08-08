@@ -19,7 +19,7 @@ public class PlayerAgent : MonoBehaviour
     public Vector2 collBoxSize;
     public Vector2 collBoxCenter;
     public LayerMask wallLayer;
-    private bool facingRight = true;
+    public bool facingRight = true;
     private List<SpriteRenderer> allSpriteRenderers;
     public string currentWorld;
     private void Start()

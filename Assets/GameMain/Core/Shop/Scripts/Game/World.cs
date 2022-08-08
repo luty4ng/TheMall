@@ -1,5 +1,7 @@
 using UnityEngine;
 using GameKit;
+using UnityEngine.Events;
+using System.Collections;
 
 public class World : MonoBehaviour
 {
@@ -8,8 +10,13 @@ public class World : MonoBehaviour
     private DialogSystem dialogSystem;
     private SpriteRenderer[] renderers;
     public bool IsSettable = true;
+    public UnityEvent EnterEvent;
+    private PlayerAgent player;
+    private bool hasExecuted;
     private void Start()
     {
+        hasExecuted = false;
+        player = GameObject.Find("Player").GetComponent<PlayerAgent>();
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
         renderers = GetComponentsInChildren<SpriteRenderer>();
         EntityBase[] entities = GetComponentsInChildren<EntityBase>();
@@ -39,15 +46,19 @@ public class World : MonoBehaviour
             }
         }
     }
-    public enum Room_Name
+    private void Update()
     {
-        Hallway = 1,
-        Director = 2,
-        Shop = 3,
-        Orphanage = 4,
-        MainCafe = 5,
-        Storage = 6,
-        Basement = 7,
-        Secret = 8
+        if (hasExecuted) return;
+        if (player.currentWorld == this.WorldName)
+        {
+            StartCoroutine(EventTrigger(500));
+        }
+    }
+
+    IEnumerator EventTrigger(float duration)
+    {
+            yield return new WaitForSeconds(duration * Time.deltaTime);
+            EnterEvent?.Invoke();
+            hasExecuted = true;
     }
 }
