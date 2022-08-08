@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
+  m_Name: "\u6742\u7269\u95F4\u7684\u8BDD2"
+  m_EditorClassIdentifier: 
+  title: Board's words
+  contents: "\u6742\u5DE5\uFF1A\u8FD9\u8FB9\u4F3C\u4E4E\u6CA1\u6709\u4EC0\u4E48\u5176\u5B83\u6709\u7528\u7684\u4E1C\u897F\u4E86\u3002"
