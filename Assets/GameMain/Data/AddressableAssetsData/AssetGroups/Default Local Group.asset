@@ -106,11 +106,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - DialogPack
-  - m_GUID: 50918bc5997669c49bd1ed6cedb6741c
-    m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u6D77\u62A5\u7684\u8BDD.asset"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - DialogPack
   - m_GUID: f2e6e24e84660684a965938b30df57f1
     m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u5973\u6A21\u7279\u7684\u8BDD.asset"
     m_ReadOnly: 0
@@ -321,6 +316,15 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2ffc563cab0cc694bab5cb69d443fca1
     m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u690D\u7269\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 50918bc5997669c49bd1ed6cedb6741c
+    m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u6D77\u62A5\u7684\u8BDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 44c68a622e90a7843858f452804501af
+    m_Address: "Assets/GameMain/Data/1st Scene/3rd floor/\u7535\u8BDD\u7684\u8BDD
+      1.asset"
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
