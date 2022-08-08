@@ -236,50 +236,6 @@ Transform:
   m_Father: {fileID: 435221567}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &32775209
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 32775210}
-  - component: {fileID: 32775211}
-  m_Layer: 0
-  m_Name: DialogSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &32775210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32775209}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2104525957}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &32775211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32775209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e8eba6e0f534b2408a139dc9db929a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDialoging: 0
 --- !u!1001 &39985235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4395,7 +4351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4354789230914143570, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4354789230914143572, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_Sprite
@@ -4503,7 +4459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4354789231050460670, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 26.24
+      value: -22.36
       objectReference: {fileID: 0}
     - target: {fileID: 4354789231278399940, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_IsActive
@@ -10328,7 +10284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953622346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12407,6 +12363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phone
       objectReference: {fileID: 0}
+    - target: {fileID: 8606480711659090408, guid: a5b6e3ae8939f9f4d8d9d0f7f8e771f6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8606480711659090410, guid: a5b6e3ae8939f9f4d8d9d0f7f8e771f6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -12484,7 +12444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214422774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e28f83cf77193fc4d8190d196ef4a4f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f6c2d383e75d484bb5406a7c497bc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogAsset: {fileID: 11400000, guid: 439c03c70c21729439d6f67127d19daf, type: 2}
@@ -12503,7 +12463,6 @@ MonoBehaviour:
   itemName: 
   itemDesc: 
   hasClicked: 0
-  hasRing: 0
 --- !u!1001 &1228447020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13295,7 +13254,7 @@ PrefabInstance:
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1214422775}
+      objectReference: {fileID: 0}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -20133,7 +20092,6 @@ Transform:
   - {fileID: 1106429674}
   - {fileID: 401562819}
   - {fileID: 1703499724}
-  - {fileID: 32775210}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

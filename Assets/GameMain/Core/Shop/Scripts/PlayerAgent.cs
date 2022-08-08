@@ -32,17 +32,25 @@ public class PlayerAgent : MonoBehaviour
     void Update()
     {
         Vector2 detectCenter = (Vector2)this.transform.position + new Vector2(transform.localScale.x * collBoxCenter.x, collBoxCenter.y);
-        if (Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
+        horizontal = Input.GetAxisRaw("Horizontal");
+        if (!Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
         {
-            horizontal = Input.GetAxisRaw("Horizontal");
             movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
         }
-        horizontal = Input.GetAxisRaw("Horizontal");
-        movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
-        anim.SetFloat("Speed", Mathf.Abs(horizontal));
-        transform.Translate(movement);
+        else
+        {
+            if ((horizontal > 0 && this.transform.localScale.x < 0) ||
+                (horizontal < 0 && this.transform.localScale.x > 0))
+            {
+                movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
+                transform.Translate(movement);
+            }
+            else
+                anim.SetFloat("Speed", 0);
+        }
+
         if (horizontal > 0 && !facingRight) flip();
         if (horizontal < 0 && facingRight) flip();
 
