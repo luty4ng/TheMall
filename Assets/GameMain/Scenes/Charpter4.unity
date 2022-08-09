@@ -3891,6 +3891,8 @@ MonoBehaviour:
           m_StringArgument: WorldA
           m_BoolArgument: 0
         m_CallState: 2
+  canExit: 1
+  canLoop: 0
 --- !u!4 &577471430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4833941747363873178, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
@@ -5218,6 +5220,8 @@ MonoBehaviour:
   AfterVideo:
     m_PersistentCalls:
       m_Calls: []
+  canExit: 1
+  canLoop: 0
 --- !u!1001 &812868909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5334,6 +5338,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 511137037}
     m_Modifications:
+    - target: {fileID: 5826199420833713147, guid: 0f414d23c10d9c34695602541d5ac403, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1623056146}
     - target: {fileID: 7650298686073154118, guid: 0f414d23c10d9c34695602541d5ac403, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7126,6 +7134,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 11.94
       objectReference: {fileID: 0}
+    - target: {fileID: 5826199420833713147, guid: 0f414d23c10d9c34695602541d5ac403, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1623056146}
     - target: {fileID: 7650298686073154118, guid: 0f414d23c10d9c34695602541d5ac403, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7398,6 +7410,7 @@ MonoBehaviour:
   anim: {fileID: 1465501534}
   facingRight: 1
   isFading: 0
+  canDestroy: 1
 --- !u!114 &1465501533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8672,8 +8685,9 @@ MonoBehaviour:
     m_Bits: 0
   facingRight: 0
   currentWorld: WorldB
-  currentFloor: Floor1
   camFollowPos: {fileID: 0}
+  currentFloor: Floor1
+  startWorld: {fileID: 0}
 --- !u!95 &1623056147
 Animator:
   serializedVersion: 3
@@ -8886,7 +8900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659217088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.203971, y: 11.990864, z: -24.965961}
+  m_LocalPosition: {x: 14.203788, y: 12.007301, z: -24.965961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2100402463}
@@ -9206,6 +9220,7 @@ MonoBehaviour:
   anim: {fileID: 1759315386}
   facingRight: 1
   isFading: 0
+  canDestroy: 1
 --- !u!114 &1759315385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9440,6 +9455,7 @@ MonoBehaviour:
   anim: {fileID: 1795190865}
   facingRight: 1
   isFading: 0
+  canDestroy: 1
 --- !u!114 &1795190864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10754,6 +10770,8 @@ MonoBehaviour:
   AfterVideo:
     m_PersistentCalls:
       m_Calls: []
+  canExit: 1
+  canLoop: 0
 --- !u!1 &2100402462
 GameObject:
   m_ObjectHideFlags: 0
