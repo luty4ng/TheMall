@@ -59,6 +59,30 @@ public class GlobalSound : MonoSingletonBase<GlobalSound>
             Utility.Debugger.LogFail(volume.ToString());
         }
     }
+
+    public void StopSound(string name)
+    {
+        if (m_cachedSounds.ContainsKey(name) && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        else
+        {
+            Utility.Debugger.LogFail("Can not stop sound {0}.", name);
+        }
+    }
+
+    public void StopMusic(string name)
+    {
+        if (m_cachedMusics.ContainsKey(name) && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        else
+        {
+            Utility.Debugger.LogFail("Can not stop music {0}.", name);
+        }
+    }
     public void PlayCustomMusic(AudioClip clip, float volume, bool isLoop = false)
     {
         audioSource.clip = clip;
