@@ -62,8 +62,8 @@ public class Interval : MonoBehaviour
 
                 if (isMoving)
                 {
-                    float volume = Mathf.Clamp(5 / disToJuncture, 0.1f, 1f);
-                    //GlobalSound.current.PlaySound("女性笑声", volume);
+                    float volume = Mathf.Clamp(0.1f / disToJuncture, 0.001f, 0.03f);
+                    GlobalSound.current.PlaySound("女性笑声", volume);
                 }
 
                 // Debug.Log(disToJuncture);
