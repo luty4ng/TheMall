@@ -4856,6 +4856,7 @@ GameObject:
   - component: {fileID: 396165750}
   - component: {fileID: 396165749}
   - component: {fileID: 396165748}
+  - component: {fileID: 396165751}
   m_Layer: 0
   m_Name: HintBubble
   m_TagString: Untagged
@@ -4892,7 +4893,7 @@ Animator:
   m_GameObject: {fileID: 396165746}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ecf3478262fce342a0b6537c32baa73, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4939,6 +4940,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396165746}
   m_CullTransparentMesh: 1
+--- !u!225 &396165751
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396165746}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &401562818
 GameObject:
   m_ObjectHideFlags: 0
@@ -16947,6 +16960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2119148438}
+  canvas: {fileID: 0}
 --- !u!225 &1328043223
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17009,7 +17023,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 371722692}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -17017,7 +17031,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1860669115
+  m_SortingLayerID: 907332837
   m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!4 &1347930437 stripped

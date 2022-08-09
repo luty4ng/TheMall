@@ -33,7 +33,7 @@ public class PlayerAgent : MonoBehaviour
         allSpriteRenderers = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
         if (startWorld != null)
         {
-            if(startWorld.themeMusic != null)GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic,true);
+            if (startWorld.themeMusic != null) GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic, true);
         }
     }
     void Update()
@@ -148,6 +148,7 @@ public class PlayerAgent : MonoBehaviour
             allSpriteRenderers[i].sortingLayerName = worldName;
             allSpriteRenderers[i].maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         }
+        uI_Bubble.canvas.sortingLayerName = worldName;
         currentWorld = worldName;
         Debug.Log(currentWorldA + ">>" + currentWorldB);
         if (worldName == "WorldA")
