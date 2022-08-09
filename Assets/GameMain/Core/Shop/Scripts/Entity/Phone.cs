@@ -12,6 +12,7 @@ public class Phone : Item
     public void Ring()
     {
         hasRing = true;
+        GlobalSound.current.PlaySound("电话铃声", 1,true);
         // Ring
     }
 }
