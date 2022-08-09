@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +22,7 @@ public class video : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             AfterVideo?.Invoke();
         }
@@ -44,4 +43,5 @@ public class video : MonoBehaviour
         }
         AfterVideo?.Invoke();
     }
+
 }
