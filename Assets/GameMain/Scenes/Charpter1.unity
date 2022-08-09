@@ -15378,7 +15378,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214422774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6c2d383e75d484bb5406a7c497bc1b, type: 3}
+  m_Script: {fileID: 11500000, guid: e28f83cf77193fc4d8190d196ef4a4f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogAsset: {fileID: 11400000, guid: 439c03c70c21729439d6f67127d19daf, type: 2}
@@ -15386,8 +15386,8 @@ MonoBehaviour:
   boxCollider2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
   closeUpSprite: {fileID: 0}
-  canCloseUp: 0
-  canCollect: 0
+  canCloseUp: 1
+  canCollect: 1
   AfterFirstInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -15397,6 +15397,7 @@ MonoBehaviour:
   itemName: 
   itemDesc: 
   hasClicked: 0
+  hasRing: 0
 --- !u!1001 &1228447020
 PrefabInstance:
   m_ObjectHideFlags: 0
