@@ -43,7 +43,6 @@ public class PlayerAgent : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         if (!Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
         {
-            Debug.Log(movement.x);
             movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
@@ -152,9 +151,9 @@ public class PlayerAgent : MonoBehaviour
         currentWorld = worldName;
         Debug.Log(currentWorldA + ">>" + currentWorldB);
         //if (worldName == "WorldA")
-            //GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
+        //GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
         //else if (worldName == "WorldB")
-            //GlobalSound.current.PlayCustomMusicGradually(currentWorldB?.themeMusic);
+        //GlobalSound.current.PlayCustomMusicGradually(currentWorldB?.themeMusic);
     }
 
     public void SetFloor(string FloorName)
