@@ -33,6 +33,7 @@ public class GlobalSound : MonoSingletonBase<GlobalSound>
             // Debug.Log($"Play shit");
             audioSource.clip = m_cachedSounds[name];
             audioSource.volume = volume;
+            audioSource.loop = isLoop;
             audioSource.Play();
         }
         else
@@ -42,13 +43,37 @@ public class GlobalSound : MonoSingletonBase<GlobalSound>
         }
     }
 
-    public void PlayCustomMusic(string name, AudioClip clip, float volume, bool isLoop = false)
+    public void PlayMusic(string name, float volume, bool isLoop = false)
+    {
+        if (m_cachedMusics.ContainsKey(name) && !audioSource.isPlaying)
+        {
+            // Debug.Log($"Play shit");
+            audioSource.clip = m_cachedMusics[name];
+            audioSource.volume = volume;
+            audioSource.loop = isLoop;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.volume = volume;
+            Utility.Debugger.LogFail(volume.ToString());
+        }
+    }
+    public void PlayCustomMusic(AudioClip clip, float volume, bool isLoop = false)
     {
         audioSource.clip = clip;
         audioSource.volume = volume;
+        audioSource.loop = isLoop;
         audioSource.Play();
     }
 
+    public void PlayCustomSound(AudioClip clip, float volume, bool isLoop = false)
+    {
+        audioSource.clip = clip;
+        audioSource.volume = volume;
+        audioSource.loop = isLoop;
+        audioSource.Play();
+    }
     public void PlayCustomMusicGradually(AudioClip clip, bool isLoop = false)
     {
         if (clip == null)
