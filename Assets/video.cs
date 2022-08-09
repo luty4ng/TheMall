@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,14 @@ public class video : MonoBehaviour
     {
         videoPlayer.isLooping = canLoop;
         videoPlayer.loopPointReached += ExitAfterPlayed;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            AfterVideo?.Invoke();
+        }
     }
 
     public void prepareVideo()
