@@ -242,7 +242,6 @@ public class DialogSystem : GameKitComponent
         dialogTree = null;
         uI_DialogSystem.Hide();
         ClearRecords();
-        Debug.Log(Callback);
         Callback?.Invoke();
         Callback = null;
     }

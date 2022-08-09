@@ -1,10 +1,13 @@
 using UnityEngine;
 using GameKit;
+using System.Collections;
 using System.Collections.Generic;
 public class GlobalSound : MonoSingletonBase<GlobalSound>
 {
-    public AudioSource audioSource;
-
+    private AudioSource audioSource;
+    public AudioSource bgm1;
+    public AudioSource bgm2;
+    [Header("声音渐变的速度"), Range(0f, 1f)] public float GradientSpeed = 0.2f;
     public List<AudioClip> musics = new List<AudioClip>();
     public List<AudioClip> sounds = new List<AudioClip>();
     private Dictionary<string, AudioClip> m_cachedSounds = new Dictionary<string, AudioClip>();
@@ -39,4 +42,57 @@ public class GlobalSound : MonoSingletonBase<GlobalSound>
         }
     }
 
+    public void PlayCustomMusic(string name, AudioClip clip, float volume, bool isLoop = false)
+    {
+        audioSource.clip = clip;
+        audioSource.volume = volume;
+        audioSource.Play();
+    }
+
+    public void PlayCustomMusicGradually(AudioClip clip, bool isLoop = false)
+    {
+        if (clip == null)
+        {
+            Utility.Debugger.LogError("World AudioClip is Null, Set it in World Component.");
+            return;
+        }
+        Debug.Log(bgm1.isPlaying + " >> " + bgm2.isPlaying);
+        if ((bgm1.isPlaying && !bgm2.isPlaying) || (!bgm1.isPlaying && !bgm2.isPlaying))
+        {
+            Debug.Log($"Mode 1");
+            bgm2.clip = clip;
+            bgm2.volume = 0;
+            bgm2.Play();
+            StartCoroutine(ReduceVolume(bgm1));
+            StartCoroutine(IncreaseVolume(bgm2));
+        }
+        else if (bgm2.isPlaying && !bgm1.isPlaying)
+        {
+            Debug.Log($"Mode 2");
+            bgm1.clip = clip;
+            bgm1.volume = 0;
+            bgm1.Play();
+            StartCoroutine(ReduceVolume(bgm2));
+            StartCoroutine(IncreaseVolume(bgm1));
+        }
+    }
+
+    IEnumerator ReduceVolume(AudioSource source)
+    {
+        while (source.volume > 0)
+        {
+            yield return null;
+            source.volume -= Time.deltaTime * GradientSpeed;
+        }
+        source.Stop();
+    }
+
+    IEnumerator IncreaseVolume(AudioSource source)
+    {
+        while (source.volume < 1)
+        {
+            yield return null;
+            source.volume += Time.deltaTime * GradientSpeed;
+        }
+    }
 }
