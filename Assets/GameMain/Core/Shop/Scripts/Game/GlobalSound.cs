@@ -15,6 +15,7 @@ public class GlobalSound : MonoSingletonBase<GlobalSound>
     protected override void OnAwake()
     {
         audioSource = this.gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
         for (int i = 0; i < musics.Count; i++)
         {
             m_cachedMusics.Add(musics[i].name, musics[i]);

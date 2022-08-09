@@ -33,7 +33,7 @@ public class PlayerAgent : MonoBehaviour
         allSpriteRenderers = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
         if (startWorld != null)
         {
-            //if(startWorld.themeMusic != null)GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic);
+            if(startWorld.themeMusic != null)GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic);
         }
     }
     void Update()
