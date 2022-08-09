@@ -57,7 +57,7 @@ Transform:
   m_LocalPosition: {x: 45.6, y: -7, z: -0.40443215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4354789230789167886
@@ -202,7 +202,7 @@ Transform:
   m_LocalPosition: {x: -2.33, y: 0.53, z: 0}
   m_LocalScale: {x: 2, y: 15, z: 1}
   m_Children: []
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4354789231004033897
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11508574440bb704daaea2e51af46e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  betweening: {fileID: 8458609905414270914}
+  betweenings: []
   intervalType: 0
   maskA: {fileID: 4354789231050460656}
   maskB: {fileID: 4354789232039853649}
@@ -302,6 +302,10 @@ MonoBehaviour:
   rightEdge: {fileID: 4354789231774542228}
   CanTravel: 0
   IsTravelActive: 1
+  WorldA: {fileID: 0}
+  WorldB: {fileID: 0}
+  isMoving: 0
+  player: {fileID: 0}
 --- !u!1 &4354789231050460668
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +336,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.86, y: 1.3948438, z: 1}
   m_Children: []
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -483,7 +487,7 @@ Transform:
   m_Children:
   - {fileID: 4354789230914143573}
   - {fileID: 7251199081764204402}
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6429236547668088828
@@ -500,7 +504,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WorldName: WorldB
   RoomId: 0
+  themeMusic: {fileID: 0}
   IsSettable: 1
+  EnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Immediate: 0
 --- !u!1 &4354789231583422112
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +622,7 @@ Transform:
   m_Children:
   - {fileID: 4354789231583422115}
   - {fileID: 4354789230789167873}
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3572389995613522716
@@ -630,7 +639,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WorldName: WorldA
   RoomId: 0
+  themeMusic: {fileID: 0}
   IsSettable: 1
+  EnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Immediate: 0
 --- !u!1 &4354789231661826418
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,8 +653,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4354789231661826421}
+  - component: {fileID: 6965961127552419785}
   - component: {fileID: 4804594719010305029}
+  - component: {fileID: 6696697656410964785}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -648,15 +663,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4354789231661826421
-Transform:
+--- !u!224 &6965961127552419785
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4354789231661826418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4354789231004033896}
@@ -672,6 +687,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.3, y: 16}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4804594719010305029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +704,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec186b1f60acda646afd82939c08bf45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloorName: 
   exitCondition: {fileID: 0}
+--- !u!222 &6696697656410964785
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4354789231661826418}
+  m_CullTransparentMesh: 1
 --- !u!1 &4354789231774542229
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +741,7 @@ Transform:
   m_LocalPosition: {x: 47.52, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4354789232039853661
@@ -745,7 +774,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.0699687, y: 1.394844, z: 1}
   m_Children: []
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -893,7 +922,7 @@ Transform:
   m_LocalPosition: {x: -22.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6306874627076481693
@@ -923,7 +952,7 @@ Transform:
   m_LocalPosition: {x: -15.2, y: -7, z: -0.40443215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4354789231661826421}
+  m_Father: {fileID: 6965961127552419785}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1878021650640229719
@@ -931,7 +960,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4354789231661826421}
+    m_TransformParent: {fileID: 6965961127552419785}
     m_Modifications:
     - target: {fileID: 8030787132160621202, guid: d6c81d6b34a16124c8357e461194b087, type: 3}
       propertyPath: m_Name
