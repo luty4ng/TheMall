@@ -12,7 +12,13 @@ public class Phone : Item
     public void Ring()
     {
         hasRing = true;
-        GlobalSound.current.PlaySound("电话铃声", 1,true);
+        GlobalSound.current.PlaySound("电话铃声", 0.5f,true);
         // Ring
+    }
+
+    public void StopRing()
+    {
+        hasRing = false;
+        GlobalSound.current.StopSound("电话铃声");
     }
 }
