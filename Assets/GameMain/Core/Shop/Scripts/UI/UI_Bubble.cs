@@ -26,8 +26,8 @@ public class UI_Bubble : UIGroup
     {
         if(animator.runtimeAnimatorController!=null)
         {
-            animator.ResetTrigger("FadeIn");
-            animator.SetTrigger("FadeIn");
+            animator.ResetTrigger("UI_Record_FadeIn");
+            animator.SetTrigger("UI_Record_FadeIn");
             return;
         }
         base.Show();
@@ -43,8 +43,8 @@ public class UI_Bubble : UIGroup
     {
         if(animator.runtimeAnimatorController!=null)
         {
-            animator.ResetTrigger("FadeOut");
-            animator.SetTrigger("FadeOut");
+            animator.ResetTrigger("UI_Record_FadeOut");
+            animator.SetTrigger("UI_Record_FadeOut");
             return;
         }
         base.Hide();

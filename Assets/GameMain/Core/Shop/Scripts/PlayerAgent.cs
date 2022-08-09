@@ -33,7 +33,7 @@ public class PlayerAgent : MonoBehaviour
         allSpriteRenderers = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
         if (startWorld != null)
         {
-            if(startWorld.themeMusic != null)GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic);
+            if(startWorld.themeMusic != null)GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic,true);
         }
     }
     void Update()
@@ -151,10 +151,10 @@ public class PlayerAgent : MonoBehaviour
         }
         currentWorld = worldName;
         Debug.Log(currentWorldA + ">>" + currentWorldB);
-        //if (worldName == "WorldA")
-            //GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
-        //else if (worldName == "WorldB")
-            //GlobalSound.current.PlayCustomMusicGradually(currentWorldB?.themeMusic);
+        if (worldName == "WorldA")
+            GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
+        else if (worldName == "WorldB")
+            GlobalSound.current.PlayCustomMusicGradually(currentWorldB?.themeMusic);
     }
 
     public void SetFloor(string FloorName)
