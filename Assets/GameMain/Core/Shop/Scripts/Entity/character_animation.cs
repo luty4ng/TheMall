@@ -11,4 +11,9 @@ public class character_animation : MonoBehaviour
         print("nihao");
         animator.Play("走路1");
     }
+
+    public void PlayStart()
+    {
+        animator.Play("走路2");
+    }
 }
