@@ -11,15 +11,13 @@ public class video : MonoBehaviour
     [SerializeField] GameObject Screen;
     [SerializeField] UnityEvent AfterVideo;
     // Start is called before the first frame update
+
+    public bool canExit = true;
+    public bool canLoop = false;
     void Start()
     {
+        videoPlayer.isLooping = canLoop;
         videoPlayer.loopPointReached += ExitAfterPlayed;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void prepareVideo()
@@ -30,8 +28,11 @@ public class video : MonoBehaviour
     }
     void ExitAfterPlayed(VideoPlayer vp)
     {
-        Screen.gameObject.SetActive(false);
-        videoPlayer.gameObject.SetActive(false);
+        if (canExit)
+        {
+            Screen.gameObject.SetActive(false);
+            videoPlayer.gameObject.SetActive(false);
+        }
         AfterVideo?.Invoke();
     }
 }
