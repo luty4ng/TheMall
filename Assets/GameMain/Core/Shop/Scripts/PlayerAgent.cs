@@ -32,6 +32,7 @@ public class PlayerAgent : MonoBehaviour
     }
     void Update()
     {
+        
         Vector2 detectCenter = (Vector2)this.transform.position + new Vector2(transform.localScale.x * collBoxCenter.x, collBoxCenter.y);
         horizontal = Input.GetAxisRaw("Horizontal");
         if (!Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
@@ -51,9 +52,12 @@ public class PlayerAgent : MonoBehaviour
             else
                 anim.SetFloat("Speed", 0);
         }
+        
 
         if (horizontal > 0 && !facingRight) flip();
         if (horizontal < 0 && facingRight) flip();
+        
+        uI_Bubble.transform.localScale = new Vector2(Mathf.Sign(transform.localScale.x) * Mathf.Abs(uI_Bubble.transform.localScale.x), uI_Bubble.transform.localScale.y);
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -83,13 +87,18 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other?.gameObject.layer == LayerMask.NameToLayer("Interactive"))
+        {
+            uI_Bubble.Show();
+        }
+
         if (other?.tag == "Collective")
         {
             currentEntity = other.GetComponent<IInteractive>();
             if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
                 return;
             currentEntity.OnPassEnter();
-            if (other.transform.GetComponent<Item>().hasClicked && other.transform.GetComponent<Item>().canCollect) uI_Bubble.Show();
+
         }
         if (other?.tag == "Exit" || other?.tag == "Character")
         {
@@ -97,7 +106,6 @@ public class PlayerAgent : MonoBehaviour
             if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
                 return;
             currentEntity.OnPassEnter();
-            uI_Bubble.Show();
         }
         if (other?.tag == "Wall")
         {
@@ -115,8 +123,8 @@ public class PlayerAgent : MonoBehaviour
             if (currentWorld != currentEntity.SBelongWorld)
                 return;
             currentEntity?.OnPassExit();
-            uI_Bubble.Hide();
         }
+        uI_Bubble.Hide();
     }
 
     void flip()
