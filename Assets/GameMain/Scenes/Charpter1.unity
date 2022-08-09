@@ -2142,7 +2142,7 @@ PrefabInstance:
     - target: {fileID: 6174644420774183198, guid: 6ad8783bbe612484599e3efb1410e3dd, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 5066516210978788625, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+      objectReference: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
     - target: {fileID: 6174644420774183198, guid: 6ad8783bbe612484599e3efb1410e3dd, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
@@ -5016,7 +5016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48.542, y: 297}
+  m_AnchoredPosition: {x: 91.413, y: 322}
   m_SizeDelta: {x: 545.8073, y: 98.2733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427849409
@@ -5039,10 +5039,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u554A\u554A\u554A\u554A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+  m_sharedMaterial: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10769,8 +10769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 349.93, y: -126}
-  m_SizeDelta: {x: 1148.5889, y: 586.1002}
+  m_AnchoredPosition: {x: 310.11847, y: -116.81271}
+  m_SizeDelta: {x: 983.2178, y: 604.4749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837551601
 MonoBehaviour:
@@ -10792,10 +10792,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u4EC0\u4E48\u662F\u771F\u7684\uFF0C\u4EC0\u4E48\u662F\u5047\u7684\uFF0C\u4EC0\u4E48\u662F\u5B58\u5728\u7684\uFF0C\u4EC0\u4E48\u662F\u865A\u5E7B\u7684\uFF0C\u4EC0\u4E48\u662F\u955C\u5934\u4E2D\u7684\uFF0C\u4EC0\u4E48\u662F\u955C\u5934\u5916\u7684\uFF0C\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+  m_sharedMaterial: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10819,8 +10819,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.97
-  m_fontSizeBase: 61.97
+  m_fontSize: 52
+  m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16779,8 +16779,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -573.9, y: -35}
-  m_SizeDelta: {x: 699.07, y: 889.5055}
+  m_AnchoredPosition: {x: -589, y: -50}
+  m_SizeDelta: {x: 485.1987, y: 595.6718}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362412882
 MonoBehaviour:
@@ -17065,7 +17065,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389414970}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -18247,7 +18247,7 @@ PrefabInstance:
     - target: {fileID: 5609233204791152137, guid: 639b3b6afeab93b4f8b59891a64aa2a4, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 5066516210978788625, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+      objectReference: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
     - target: {fileID: 5609233204791152137, guid: 639b3b6afeab93b4f8b59891a64aa2a4, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
