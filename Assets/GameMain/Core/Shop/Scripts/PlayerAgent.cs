@@ -33,7 +33,7 @@ public class PlayerAgent : MonoBehaviour
         allSpriteRenderers = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
         if (startWorld != null)
         {
-            if(startWorld.themeMusic != null)GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic);
+            if (startWorld.themeMusic != null) GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic, true);
         }
     }
     void Update()
@@ -148,12 +148,13 @@ public class PlayerAgent : MonoBehaviour
             allSpriteRenderers[i].sortingLayerName = worldName;
             allSpriteRenderers[i].maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         }
+        uI_Bubble.canvas.sortingLayerName = worldName;
         currentWorld = worldName;
         Debug.Log(currentWorldA + ">>" + currentWorldB);
-        //if (worldName == "WorldA")
-            //GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
-        //else if (worldName == "WorldB")
-            //GlobalSound.current.PlayCustomMusicGradually(currentWorldB?.themeMusic);
+        if (worldName == "WorldA")
+            GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
+        else if (worldName == "WorldB")
+            GlobalSound.current.PlayCustomMusicGradually(currentWorldB?.themeMusic);
     }
 
     public void SetFloor(string FloorName)
@@ -161,6 +162,19 @@ public class PlayerAgent : MonoBehaviour
         currentFloor = FloorName;
     }
 
+    public void SetWorldSpefic(World World)
+    {
+        if (World.WorldName == "WorldA")
+        {
+            currentWorldA = World;
+            SetWorld("WorldA");
+        }
+        else if (World.WorldName == "WorldB")
+        {
+            currentWorldB = World;
+            SetWorld("WorldB");
+        }
+    }
 
     public void SwitchWorld(World WorldA, World WorldB)
     {
@@ -179,13 +193,14 @@ public class PlayerAgent : MonoBehaviour
     }
 
     // 临时改变玩家所属层，仅对商场有效，进入商场调用，离开商场调用SetWorld
-    public void SetLayerToNone()
+    public void SetLayerToNone(World world)
     {
         for (int i = 0; i < allSpriteRenderers.Count; i++)
         {
             allSpriteRenderers[i].sortingLayerName = "None";
             allSpriteRenderers[i].maskInteraction = SpriteMaskInteraction.None;
         }
+        GlobalSound.current.PlayCustomMusicGradually(world?.themeMusic);
         currentWorld = "None";
     }
 

@@ -40,7 +40,7 @@ public class GlobalSound : MonoSingletonBase<GlobalSound>
         else
         {
             audioSource.volume = volume;
-            Utility.Debugger.LogFail(volume.ToString());
+            // Utility.Debugger.LogFail(volume.ToString());
         }
     }
 

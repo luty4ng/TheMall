@@ -20,6 +20,14 @@ public class video : MonoBehaviour
         videoPlayer.loopPointReached += ExitAfterPlayed;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            AfterVideo?.Invoke();
+        }
+    }
+
     public void prepareVideo()
     {
         videoPlayer.gameObject.SetActive(true);
@@ -35,4 +43,5 @@ public class video : MonoBehaviour
         }
         AfterVideo?.Invoke();
     }
+
 }
