@@ -11,6 +11,8 @@ public static class ScenesList
     public static void Assets_GameMain_Scenes_Charpter1_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter1.unity"); }
     [MenuItem("Scenes/Charpter2")]
     public static void Assets_GameMain_Scenes_Charpter2_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter2.unity"); }
+    [MenuItem("Scenes/Charpter2_ComingSoonCG")]
+    public static void Assets_GameMain_Scenes_Charpter2_ComingSoonCG_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter2_ComingSoonCG.unity"); }
     [MenuItem("Scenes/Charpter3")]
     public static void Assets_GameMain_Scenes_Charpter3_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter3.unity"); }
     [MenuItem("Scenes/Charpter4")]
