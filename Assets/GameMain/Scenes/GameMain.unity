@@ -3918,8 +3918,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8FD9\u91CC\u7F16\u5199\u9E23\u8C22\u5185\u5BB9"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ce3f139af2e320945a6e3740126152a3, type: 2}
-  m_sharedMaterial: {fileID: -2800537103155339806, guid: ce3f139af2e320945a6e3740126152a3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9879,7 +9879,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Charpter1
+          m_StringArgument: Charpter_StartCG
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &4354789231359276448
