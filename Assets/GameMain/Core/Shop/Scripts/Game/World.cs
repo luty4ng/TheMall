@@ -17,7 +17,7 @@ public class World : MonoBehaviour
     private void Start()
     {
         hasExecuted = false;
-        player = GameObject.Find("Player").GetComponent<PlayerAgent>();
+        player = GameObject.Find("Player (1)").GetComponent<PlayerAgent>();
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
         renderers = GetComponentsInChildren<SpriteRenderer>();
         EntityBase[] entities = GetComponentsInChildren<EntityBase>();
