@@ -24,15 +24,21 @@ public class PlayerAgent : MonoBehaviour
     public string currentWorld;
     public Transform camFollowPos;
     public string currentFloor;
+    public World startWorld;
+    private World currentWorldA, currentWorldB;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
         uI_Bubble = UIManager.instance.GetUI<UI_Bubble>("UI_Bubble");
         allSpriteRenderers = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
+        if (startWorld != null)
+        {
+            GlobalSound.current.PlayCustomMusicGradually(startWorld.themeMusic);
+        }
     }
     void Update()
     {
-        
+
         Vector2 detectCenter = (Vector2)this.transform.position + new Vector2(transform.localScale.x * collBoxCenter.x, collBoxCenter.y);
         horizontal = Input.GetAxisRaw("Horizontal");
         if (!Physics2D.OverlapBox(detectCenter, collBoxSize, 0, wallLayer))
@@ -52,11 +58,11 @@ public class PlayerAgent : MonoBehaviour
             else
                 anim.SetFloat("Speed", 0);
         }
-        
+
 
         if (horizontal > 0 && !facingRight) flip();
         if (horizontal < 0 && facingRight) flip();
-        
+
         uI_Bubble.transform.localScale = new Vector2(Mathf.Sign(transform.localScale.x) * Mathf.Abs(uI_Bubble.transform.localScale.x), uI_Bubble.transform.localScale.y);
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -143,6 +149,11 @@ public class PlayerAgent : MonoBehaviour
             allSpriteRenderers[i].maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         }
         currentWorld = worldName;
+        Debug.Log(currentWorldA + ">>" + currentWorldB);
+        if (worldName == "WorldA")
+            GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
+        else if (worldName == "WorldB")
+            GlobalSound.current.PlayCustomMusicGradually(currentWorldB?.themeMusic);
     }
 
     public void SetFloor(string FloorName)
@@ -151,12 +162,20 @@ public class PlayerAgent : MonoBehaviour
     }
 
 
-    public void SwitchWorld(string WorldAName, string WorldBName)
+    public void SwitchWorld(World WorldA, World WorldB)
     {
+        currentWorldA = WorldA;
+        currentWorldB = WorldB;
         if (allSpriteRenderers.First().sortingLayerName == "WorldA")
+        {
+
             SetWorld("WorldB");
+        }
         else if (allSpriteRenderers.First().sortingLayerName == "WorldB")
+        {
+
             SetWorld("WorldA");
+        }
     }
 
     // 临时改变玩家所属层，仅对商场有效，进入商场调用，离开商场调用SetWorld

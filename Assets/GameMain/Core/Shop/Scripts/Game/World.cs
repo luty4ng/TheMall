@@ -7,6 +7,7 @@ public class World : MonoBehaviour
 {
     public string WorldName;
     public int RoomId;
+    public AudioClip themeMusic;
     private DialogSystem dialogSystem;
     private SpriteRenderer[] renderers;
     public bool IsSettable = true;

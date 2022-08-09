@@ -5131,6 +5131,10 @@ PrefabInstance:
       propertyPath: RoomId
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3572389995613522716, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: themeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 65e08a3b68d732843948ab0ff218f29f, type: 3}
     - target: {fileID: 4354789230914143570, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_Name
       value: BKG
@@ -5367,6 +5371,10 @@ PrefabInstance:
       propertyPath: IsSettable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6429236547668088828, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: themeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 65e08a3b68d732843948ab0ff218f29f, type: 3}
     - target: {fileID: 8458609905414270914, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.36
@@ -6103,6 +6111,10 @@ PrefabInstance:
       propertyPath: IsSettable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3572389995613522716, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: themeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: f9e58031ccf300a46b63d1e8ac238ab3, type: 3}
     - target: {fileID: 4354789230914143570, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_Name
       value: BKG
@@ -6339,6 +6351,10 @@ PrefabInstance:
       propertyPath: RoomId
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6429236547668088828, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: themeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 1994223ee866f1a41aa9d6725c8e5c9d, type: 3}
     - target: {fileID: 8458609905414270914, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.89
@@ -11199,6 +11215,10 @@ PrefabInstance:
       propertyPath: RoomId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3572389995613522716, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: themeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 613e8569463790b4ea94b24c92f569f5, type: 3}
     - target: {fileID: 4354789230914143570, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_Name
       value: BKG
@@ -11443,6 +11463,10 @@ PrefabInstance:
       propertyPath: RoomId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6429236547668088828, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: themeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 753b13373c25e554b912dd3bad649058, type: 3}
     - target: {fileID: 8458609905414270914, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.16
@@ -19419,6 +19443,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b6e3ae8939f9f4d8d9d0f7f8e771f6, type: 3}
+--- !u!114 &1564224984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3572389995613522716, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+  m_PrefabInstance: {fileID: 885869743}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac797a5cfc0844489d8e0a96d21ddbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570256142
 GameObject:
   m_ObjectHideFlags: 0
@@ -24818,6 +24853,7 @@ MonoBehaviour:
   currentWorld: WorldA
   camFollowPos: {fileID: 1297085663}
   currentFloor: 
+  startWorld: {fileID: 1564224984}
 --- !u!95 &2119148435
 Animator:
   serializedVersion: 3
@@ -25237,6 +25273,10 @@ PrefabInstance:
       propertyPath: IsSettable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3572389995613522716, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
+      propertyPath: themeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: f738bc64b00ff254a80547e84c927593, type: 3}
     - target: {fileID: 4354789230914143570, guid: 065fc949bf3077e4eb5575da3a556f46, type: 3}
       propertyPath: m_Name
       value: BKG

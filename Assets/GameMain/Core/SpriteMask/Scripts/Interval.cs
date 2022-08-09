@@ -23,8 +23,8 @@ public class Interval : MonoBehaviour
     private Ticker_Auto ticker;
     private float activateTime = 2f;
     private float activateDistanceOffset = 2f;
-    public string WorldName;
-    public string WorldBName;
+    public World WorldA;
+    public World WorldB;
     public bool isMoving = false;
     public Transform player;
 
@@ -35,7 +35,8 @@ public class Interval : MonoBehaviour
         ticker.Register(EnableTravel);
         ticker.Start();
         ticker.Pause();
-
+        WorldA = transform.parent.Find("WorldA").GetComponent<World>();
+        WorldB = transform.parent.Find("WorldB").GetComponent<World>();
         if (intervalType == IntervalType.Horizontal)
         {
             initOffset = this.transform.position.x;
@@ -99,7 +100,7 @@ public class Interval : MonoBehaviour
             float intervalX = this.transform.position.x;
             if (CanTravel && Mathf.Abs(playerX - intervalX) <= 0.1f)
             {
-                other.GetComponent<PlayerAgent>().SwitchWorld(WorldName, WorldBName);
+                other.GetComponent<PlayerAgent>().SwitchWorld(WorldA, WorldB);
                 CanTravel = false;
                 IsTravelActive = false;
                 this.transform.DOScaleX(2f, 0.1f).SetEase(Ease.Flash);
