@@ -34,7 +34,7 @@ public class DialogSystem : GameKitComponent
             this.characterPool = characterPool;
         });
     }
-    
+
     public void StartDialog(string title, string dialogText, UnityAction callback = null)
     {
         isDialoging = true;
@@ -67,7 +67,14 @@ public class DialogSystem : GameKitComponent
     {
         if (IsActive == false || dialogTree == null)
             return;
-                    
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            uI_DialogSystem.Hide();
+            dialogTree = null;
+            DialogManager.instance.DequeueTree();
+        }
+
         if (!isOptionShowing && isInSelection)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -241,6 +248,7 @@ public class DialogSystem : GameKitComponent
         dialogTree.Clear();
         dialogTree = null;
         uI_DialogSystem.Hide();
+        DialogManager.instance.DequeueTree();
         ClearRecords();
         Callback?.Invoke();
         Callback = null;
