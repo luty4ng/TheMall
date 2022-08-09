@@ -15,6 +15,8 @@ public static class ScenesList
     public static void Assets_GameMain_Scenes_Charpter4_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter4.unity"); }
     [MenuItem("Scenes/DialogSystem_Prototype")]
     public static void Assets_GameMain_Scenes_DialogSystem_Prototype_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/DialogSystem_Prototype.unity"); }
+    [MenuItem("Scenes/GameKit_Launcher")]
+    public static void Assets_GameMain_Scenes_GameKit_Launcher_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/GameKit_Launcher.unity"); }
     [MenuItem("Scenes/GameMain")]
     public static void Assets_GameMain_Scenes_GameMain_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/GameMain.unity"); }
     [MenuItem("Scenes/SpriteMask_Prototype")]
