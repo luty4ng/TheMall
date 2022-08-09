@@ -22258,7 +22258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goal: {fileID: 2119148438}
-  speed: 5
+  speed: 6
   onCaught:
     m_PersistentCalls:
       m_Calls:
