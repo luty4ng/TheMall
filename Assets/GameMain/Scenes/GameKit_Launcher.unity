@@ -538,6 +538,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 52f1d589d8eef5f498fa8de12bb8c847, type: 3}
   - {fileID: 8300000, guid: 5f61a746f01ab4648b302c912d07f8de, type: 3}
+  - {fileID: 8300000, guid: 8f7a8acbd2c958141819e303f0e3b8a2, type: 3}
 --- !u!1001 &580546840266179695
 PrefabInstance:
   m_ObjectHideFlags: 0

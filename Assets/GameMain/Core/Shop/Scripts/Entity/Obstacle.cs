@@ -31,6 +31,7 @@ public class Obstacle : EntityBase
     {
         if (canOpen)
         {
+            GlobalSound.current.PlaySound("卷帘门拉开", 0.5f,false);
             ImagTrans.DOMoveY(ImagTrans.position.y + 10, 0.5f);
             coverItem = this.transform.gameObject.GetComponentsInChildren<Item>();
             for (var i = 1; i < coverItem.Length; i++)
