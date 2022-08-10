@@ -70,4 +70,5 @@ public class Exit : EntityBase
     {
         OnUpdate();
     }
+    
 }
