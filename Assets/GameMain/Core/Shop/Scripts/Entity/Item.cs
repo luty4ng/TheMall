@@ -55,9 +55,8 @@ public class Item : EntityBase
         {
             if (Input.GetKeyDown(KeyCode.E))
                 return;
-            if(dialogAsset != null)dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
-            AfterFirstInteract?.Invoke();
             hasClicked = true;
+            AfterFirstInteract?.Invoke();
             if (canCloseUp)
             {
 
@@ -66,6 +65,7 @@ public class Item : EntityBase
                     floor.exitCondition.NumItem++;
                 }
             };
+            if(dialogAsset != null)dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
         }
         else
         {

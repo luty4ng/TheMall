@@ -10,7 +10,6 @@ public class CursorManager : MonoSingletonBase<CursorManager>
     public LayerMask interactiveLayer;
     private Vector3 originPos;
     private Vector3 diretcion;
-    public Texture2D Point, Select;
     private void Start()
     {
         Enable();
@@ -24,9 +23,6 @@ public class CursorManager : MonoSingletonBase<CursorManager>
             diretcion = Camera.main.transform.forward;
             this.hitInfo = Physics2D.Raycast(originPos, diretcion, 10, interactiveLayer);
         }
-
-        if (Input.GetMouseButtonDown(0)) Cursor.SetCursor(Select, new Vector2(0, 0), CursorMode.Auto);
-        else if (Input.GetMouseButtonUp(0)) Cursor.SetCursor(Point, new Vector2(0, 0), CursorMode.Auto);
     }
 
     public Vector3 TryGetHitPosition()

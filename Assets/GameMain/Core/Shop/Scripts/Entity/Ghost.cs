@@ -15,15 +15,6 @@ public class Ghost : MonoBehaviour
     public bool facingRight = true;
     public bool isFading = false;
     public bool canDestroy = true;
-    private Color ghostColor;
-    private SpriteRenderer GhostSprite;
-    public float transitionRate;
-
-    private void Start()
-    {
-        GhostSprite = this.GetComponent<SpriteRenderer>();
-        ghostColor = GhostSprite.color;
-    }
 
     // Update is called once per frame
     void Update()
@@ -31,7 +22,6 @@ public class Ghost : MonoBehaviour
 
         if (!isActive)
             return;
-        StartCoroutine(FadeEffect(transitionRate));
         distance = Mathf.Abs(Goal.position.x - transform.position.x);
         if (distance > 0.3)
         {
@@ -71,25 +61,5 @@ public class Ghost : MonoBehaviour
         currentScale.x *= -1;
         this.gameObject.transform.localScale = currentScale;
         facingRight = !facingRight;
-    }
-
-    IEnumerator FadeEffect(float transitionTime)
-    {
-        bool change = true;
-        if (ghostColor.a > 0 && change)
-        {
-            ghostColor.a -= .01f;
-            GhostSprite.color = ghostColor;
-            yield return new WaitForSeconds(transitionTime * Time.deltaTime);
-        }
-        else change = false;
-        if(ghostColor.a < 1 && !change)
-        {
-            ghostColor.a +=.01f;
-            GhostSprite.color = ghostColor;
-            yield return new WaitForSeconds(transitionTime * Time.deltaTime);
-        }
-        else change = true;
-        Debug.Log(ghostColor.a);
     }
 }

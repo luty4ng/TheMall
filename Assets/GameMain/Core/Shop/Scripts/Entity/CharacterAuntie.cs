@@ -27,6 +27,12 @@ public class CharacterAuntie : CharacterManager
         
     }
 
+    public void Aunt_Dead()
+    {
+        print("Dead");
+        isDead = true;
+    }
+
     public void SelfInteractCallback()
     {
         if (isDead)
