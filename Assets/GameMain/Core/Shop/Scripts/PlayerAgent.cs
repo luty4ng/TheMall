@@ -99,11 +99,14 @@ public class PlayerAgent : MonoBehaviour
             return;
         currentEntity.OnPassEnter();
         
-        if((currentEntity as Item).canCollect)
-            uI_Bubble.SetCollective();
-        else
-            uI_Bubble.SetInteractive();
-        
+        if(currentEntity as Item != null)
+        {
+            if ((currentEntity as Item).canCollect)
+                uI_Bubble.SetCollective();
+            else
+                uI_Bubble.SetInteractive();
+        } else uI_Bubble.SetInteractive();
+
         if (other?.tag == "Wall")
         {
             horizontal *= -1;
