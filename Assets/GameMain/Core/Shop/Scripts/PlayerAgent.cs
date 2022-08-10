@@ -93,25 +93,16 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        currentEntity = other.GetComponent<EntityBase>();
+        if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
+            return;
+        currentEntity.OnPassEnter();
         
-
-        if (other?.tag == "Collective")
-        {
-            currentEntity = other.GetComponent<EntityBase>();
-            if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
-                return;
-            currentEntity.OnPassEnter();
+        if((currentEntity as Item).canCollect)
             uI_Bubble.SetCollective();
-        }
         else
             uI_Bubble.SetInteractive();
-        if (other?.tag == "Exit" || other?.tag == "Character")
-        {
-            currentEntity = other.GetComponent<EntityBase>();
-            if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
-                return;
-            currentEntity.OnPassEnter();
-        }
+        
         if (other?.tag == "Wall")
         {
             horizontal *= -1;

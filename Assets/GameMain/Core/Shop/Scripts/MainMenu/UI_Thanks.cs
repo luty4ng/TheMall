@@ -19,7 +19,7 @@ public class UI_Thanks : UIGroup
     /// </summary>
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(0))
         {
             Hide();
         }
