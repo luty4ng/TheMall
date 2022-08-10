@@ -1348,6 +1348,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: OpenState
+      value: 
+      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: NumOfItemToExit
       value: 99
       objectReference: {fileID: 0}
@@ -4758,7 +4762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371722690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9893141, y: 11.872486, z: -10}
+  m_LocalPosition: {x: -4.933489, y: 11.8274555, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1412799195}
@@ -9252,6 +9256,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f73813750a038614fa739c63b18076ce, type: 2}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: OpenState
+      value: 
+      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -12842,6 +12850,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: OpenState
+      value: 
+      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -14823,6 +14835,10 @@ PrefabInstance:
       value: Exit_KeepDown
       objectReference: {fileID: 0}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: OpenState
+      value: 
+      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: dialogAsset
       value: 
       objectReference: {fileID: 0}
@@ -16743,6 +16759,10 @@ PrefabInstance:
       propertyPath: Response
       value: 
       objectReference: {fileID: 11400000, guid: f73813750a038614fa739c63b18076ce, type: 2}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: OpenState
+      value: 
+      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: dialogAsset
       value: 
