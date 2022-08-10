@@ -10,13 +10,17 @@ public class CursorManager : MonoSingletonBase<CursorManager>
     public LayerMask interactiveLayer;
     private Vector3 originPos;
     private Vector3 diretcion;
+    public Texture2D point, select;
     private void Start()
     {
+        Cursor.SetCursor(point, new Vector2(0, 0), CursorMode.Auto);
         Enable();
     }
 
     private void Update()
     {
+        if(Input.GetMouseButtonDown(0)) Cursor.SetCursor(select, new Vector2(0, 0), CursorMode.Auto);
+        else if(Input.GetMouseButtonUp(0)) Cursor.SetCursor(point, new Vector2(0, 0), CursorMode.Auto);
         if (IsActive)
         {
             originPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10));
