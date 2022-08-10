@@ -25,8 +25,8 @@ public class CharacterManager : EntityBase
         {
             if (dialogAsset != null)
             {
-                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
                 HasFirstDialoged = true;
+                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () => onInteract?.Invoke());
             }
         }
         else
