@@ -26,6 +26,7 @@ public class PlayerAgent : MonoBehaviour
     public string currentFloor;
     public World startWorld;
     private World currentWorldA, currentWorldB;
+    public AudioClip walkingSound;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
@@ -46,6 +47,7 @@ public class PlayerAgent : MonoBehaviour
             movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
+            GlobalSound.current.PlayCustomSound(walkingSound, 0.5f, false);
         }
         else
         {

@@ -10,7 +10,12 @@ public class Exit : EntityBase
     [Header("回调：成功离开后")]
     public UnityEvent onInteract;
     public bool Exitable;
+<<<<<<< Updated upstream
     public Sprite OpenState;
+=======
+    public AudioClip Unlock_sound;
+    public Sprite openState;
+>>>>>>> Stashed changes
 
     protected override void OnStart()
     {
@@ -62,7 +67,12 @@ public class Exit : EntityBase
     {
         GameKit.Utility.Debugger.LogSuccess("开启通道");
         Exitable = true;
+<<<<<<< Updated upstream
         this.GetComponent<SpriteRenderer>().sprite = OpenState;
+=======
+        GlobalSound.current.PlaySound("开门声", .4f);
+        this.GetComponent<SpriteRenderer>().sprite = openState;
+>>>>>>> Stashed changes
     }
 
     /// <summary>
