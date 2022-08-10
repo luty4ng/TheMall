@@ -46,11 +46,11 @@ public class UI_Bubble : UIGroup
 
     public void SetInteractive()
     {
-        // image.sprite = interactive;
+        image.sprite = interactive;
     }
 
     public void SetCollective()
     {
-        // image.sprite = collective;
+        image.sprite = collective;
     }
 }
