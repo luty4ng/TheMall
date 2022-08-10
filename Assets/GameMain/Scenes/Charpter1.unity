@@ -14783,8 +14783,8 @@ MonoBehaviour:
   interactiveLayer:
     serializedVersion: 2
     m_Bits: 64
-  point: {fileID: 0}
-  select: {fileID: 0}
+  point: {fileID: 2800000, guid: ac3ea6c09ae549849bdd7a148f2ac6fe, type: 3}
+  select: {fileID: 2800000, guid: db26bc42e4c582a44ab27217cd40a2c5, type: 3}
 --- !u!4 &1106429674
 Transform:
   m_ObjectHideFlags: 0
