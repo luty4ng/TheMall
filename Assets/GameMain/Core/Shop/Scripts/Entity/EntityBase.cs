@@ -95,6 +95,7 @@ public abstract class EntityBase : MonoBehaviour, IInteractive
     }
 
     public abstract void OnInteract();
+    public abstract void OnE();
     public void SetFloor(Floor newFloor)
     {
         this.floor = newFloor;

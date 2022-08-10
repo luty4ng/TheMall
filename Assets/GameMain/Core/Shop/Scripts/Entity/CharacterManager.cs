@@ -38,7 +38,10 @@ public class CharacterManager : EntityBase
             }
         }
         immediateInteract?.Invoke();
-        Debug.Log("Hello");
+    }
+    public override void OnE()
+    {
+
     }
 
     private void Update()

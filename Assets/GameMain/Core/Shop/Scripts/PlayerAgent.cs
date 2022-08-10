@@ -12,7 +12,7 @@ public class PlayerAgent : MonoBehaviour
     private float horizontal;
     private Vector3 movement;
     private DialogSystem dialogSystem;
-    [SerializeField] private IInteractive currentEntity;
+    [SerializeField] private EntityBase currentEntity;
     private UI_Bubble uI_Bubble;
     private GameObject currentExit;
     public Animator anim;
@@ -70,13 +70,13 @@ public class PlayerAgent : MonoBehaviour
             //Debug.Log(currentEntity);
             if (currentEntity != null)
             {
-                currentEntity?.OnInteract();
+                currentEntity?.OnE();
             }
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            IInteractive hitComponent = CursorManager.current.TryGetHitComponent<IInteractive>();
+            EntityBase hitComponent = CursorManager.current.TryGetHitComponent<EntityBase>();
             GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {
@@ -93,22 +93,21 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other?.gameObject.layer == LayerMask.NameToLayer("Interactive"))
-        {
-            uI_Bubble.Show();
-        }
+        
 
         if (other?.tag == "Collective")
         {
-            currentEntity = other.GetComponent<IInteractive>();
+            currentEntity = other.GetComponent<EntityBase>();
             if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
                 return;
             currentEntity.OnPassEnter();
-
+            uI_Bubble.SetCollective();
         }
+        else
+            uI_Bubble.SetInteractive();
         if (other?.tag == "Exit" || other?.tag == "Character")
         {
-            currentEntity = other.GetComponent<IInteractive>();
+            currentEntity = other.GetComponent<EntityBase>();
             if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
                 return;
             currentEntity.OnPassEnter();
@@ -118,6 +117,12 @@ public class PlayerAgent : MonoBehaviour
             horizontal *= -1;
         }
 
+        if (other?.gameObject.layer == LayerMask.NameToLayer("Interactive"))
+        {
+            
+            uI_Bubble.Show();
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -125,7 +130,7 @@ public class PlayerAgent : MonoBehaviour
         if (other.tag == "Collective" || other.tag == "Exit" || other.tag == "Character")
         {
             if (currentEntity == null)
-                currentEntity = other.GetComponent<IInteractive>();
+                currentEntity = other.GetComponent<EntityBase>();
             if (currentWorld != currentEntity.SBelongWorld)
                 return;
             currentEntity?.OnPassExit();

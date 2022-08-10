@@ -57,31 +57,27 @@ public class Item : EntityBase
                 return;
             hasClicked = true;
             AfterFirstInteract?.Invoke();
+
+            if (dialogAsset != null)
+                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+        }
+    }
+
+    public override void OnE()
+    {
+        if (canCollect)
+        {
+            if (floor.exitCondition != null)
+                floor.exitCondition.NumItem++;
+
             if (canCloseUp)
             {
-
-                if (floor.exitCondition != null)
-                {
-                    floor.exitCondition.NumItem++;
-                }
-            };
-            if(dialogAsset != null)dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (canCloseUp)
-                {
-                    Sprite sprite = closeUpSprite == null ? spriteRenderer.sprite : closeUpSprite;
-                    uI_CloseUp.SetCloseUp(sprite, itemName, itemDesc);
-                    uI_CloseUp.Show();
-                }
-                hasCollected = true;
+                Sprite sprite = closeUpSprite == null ? spriteRenderer.sprite : closeUpSprite;
+                uI_CloseUp.SetCloseUp(sprite, itemName, itemDesc);
+                uI_CloseUp.Show();
             }
         }
-
-        // if (canChangeSprite) this.transform.gameObject.GetComponent<SpriteRenderer>().sprite = closeUpSprite;
+        hasCollected = true;
     }
 
     public override void OnPassExit()

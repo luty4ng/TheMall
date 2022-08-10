@@ -5134,7 +5134,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
-  m_sharedMaterial: {fileID: -6975560817663608368, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+  m_sharedMaterial: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11054,7 +11054,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
-  m_sharedMaterial: {fileID: -6975560817663608368, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+  m_sharedMaterial: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17181,7 +17181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2119148438}
-  canvas: {fileID: 0}
+  canvas: {fileID: 1328043226}
+  interactive: {fileID: 21300000, guid: ce8ca1b5f197f3844a6ac0de31a05e9d, type: 3}
+  collective: {fileID: 21300000, guid: db26bc42e4c582a44ab27217cd40a2c5, type: 3}
+  image: {fileID: 396165749}
 --- !u!225 &1328043223
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25795,6 +25798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  currentEntity: {fileID: 0}
   anim: {fileID: 2119148435}
   collBoxSize: {x: 1, y: 2}
   collBoxCenter: {x: 1.62, y: 3}

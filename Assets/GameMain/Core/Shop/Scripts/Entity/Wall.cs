@@ -7,7 +7,11 @@ public class Wall : EntityBase
     public PlayerAgent Player;
     public override void OnInteract()
     {
-        throw new System.NotImplementedException();
+
+    }
+    public override void OnE()
+    {
+
     }
     private void Update()
     {

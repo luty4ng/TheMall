@@ -21,16 +21,23 @@ public class Exit : EntityBase
         SetOpen();
         if (dialogAsset != null)
             dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+
+    }
+
+    public override void OnE()
+    {
         if (Exitable)
         {
-            if (dialogAsset != null) 
-                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, ()=>{
+            if (dialogAsset != null)
+                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, () =>
+                {
                     onInteract?.Invoke();
                 });
             else
                 onInteract?.Invoke();
         }
     }
+
 
     public override void OnPassExit()
     {
