@@ -78,7 +78,7 @@ public class PlayerAgent : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             EntityBase hitComponent = CursorManager.current.TryGetHitComponent<EntityBase>();
-            Debug.Log(hitComponent?.SBelongWorld);
+            Debug.Log(hitComponent?.BelongWorld);
             GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {
@@ -146,7 +146,7 @@ public class PlayerAgent : MonoBehaviour
         }
         uI_Bubble.canvas.sortingLayerName = worldName;
         currentWorld = worldName;
-        Debug.Log(currentWorldA + ">>" + currentWorldB);
+        Debug.Log(currentWorldA);
         if (worldName == "WorldA")
             GlobalSound.current.PlayCustomMusicGradually(currentWorldA?.themeMusic);
         else if (worldName == "WorldB")
