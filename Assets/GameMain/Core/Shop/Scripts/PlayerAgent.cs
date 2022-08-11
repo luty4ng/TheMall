@@ -78,7 +78,7 @@ public class PlayerAgent : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             EntityBase hitComponent = CursorManager.current.TryGetHitComponent<EntityBase>();
-            Debug.Log(hitComponent?.BelongWorld);
+            Debug.Log(hitComponent?.SBelongWorld);
             GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {
