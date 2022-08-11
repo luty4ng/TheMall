@@ -21,7 +21,6 @@ public class DialogSystem : GameKitComponent
     private bool isInSelection = false;
     private bool isTextShowing = false;
     public bool isDialoging;
-    public AudioClip pageFlipping;
 
     private UnityAction Callback;
 
@@ -103,7 +102,7 @@ public class DialogSystem : GameKitComponent
                 }
                 else
                     InterruptTextDisplay();
-                GlobalSound.current.PlayCustomSound(pageFlipping, .4f, false);
+                GlobalSound.current.PlaySound("对话框翻页的声音", .4f, false);
             }
         }
 
