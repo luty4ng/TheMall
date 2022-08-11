@@ -59,7 +59,8 @@ public class World : MonoBehaviour
 
     IEnumerator EventTrigger(float duration)
     {
-        if(!Immediate)yield return new WaitForSeconds(duration * Time.deltaTime);
+        if (!Immediate) yield return new WaitForSeconds(duration * Time.deltaTime);
+        else yield return null;
             EnterEvent?.Invoke();
             hasExecuted = true;
     }

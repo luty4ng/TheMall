@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd72dcfa5d28cac40a3be446a5ab8f87, type: 3}
-  m_Name: Caughtup's words
+  m_Script: {fileID: 11500000, guid: f3d0ed17694105c43adcd00298bee7e5, type: 3}
+  m_Name: Character_Meng
   m_EditorClassIdentifier: 
-  title: "\u8FFD\u4E0A\u6765\u7684\u8BDD"
-  contents: "\u674E\u7130\uFF1A\uFF08\u7EC8\u4E8E......\uFF09\r\n\u674E\u7130\uFF1A\uFF08\u7EC8\u4E8E\u8FFD\u4E0A\u4F60\u4E86......\uFF09\r\n"
+  idName: Meng
+  displayName: "\u5C0F\u68A6"
+  iconicColor: {r: 0, g: 0, b: 0, a: 0}
+  introduction: "\u8FD9\u662F\u5C0F\u68A6"
+  moods: []
