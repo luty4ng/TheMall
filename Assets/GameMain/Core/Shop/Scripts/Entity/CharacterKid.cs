@@ -11,9 +11,10 @@ public class CharacterKid : CharacterManager
             floor.exitCondition.Exitable = true;
             if (dialogAsset != null && AfterFind != null)
             {
-                dialogSystem.StartDialog(AfterFind.title, AfterFind.contents);
                 this.gameObject.SetActive(false);
                 hint.SetActive(true);
+                dialogSystem.StartDialog(AfterFind.title, AfterFind.contents);
+
             }
                 
         }
