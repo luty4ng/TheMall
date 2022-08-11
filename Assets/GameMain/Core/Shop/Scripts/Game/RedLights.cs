@@ -37,7 +37,7 @@ public class RedLights : MonoSingletonBase<RedLights>
 
     IEnumerator SlowlyHideLight(Light2D light2D)
     {
-        while (light2D.intensity > 0.1f)
+        while (light2D.intensity > 0.2f)
         {
             yield return null;
             light2D.intensity -= showSpeed * Time.deltaTime;
