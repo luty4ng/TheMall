@@ -47,7 +47,7 @@ public class PlayerAgent : MonoBehaviour
             movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
-            GlobalSound.current.PlayCustomSound(walkingSound, 0.5f, false);
+            GlobalSound.current.PlayCustomSound(walkingSound, 1f, false);
         }
         else
         {
