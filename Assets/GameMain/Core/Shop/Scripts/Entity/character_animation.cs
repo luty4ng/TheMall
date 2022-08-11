@@ -14,6 +14,6 @@ public class character_animation : MonoBehaviour
 
     public void PlayStart()
     {
-        animator.Play("走路2");
+        animator.Play("待机1");
     }
 }
