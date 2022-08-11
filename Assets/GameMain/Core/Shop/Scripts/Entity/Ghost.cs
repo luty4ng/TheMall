@@ -36,7 +36,7 @@ public class Ghost : MonoBehaviour
         }else
         {
             if (anim != null) anim.SetFloat("Speed", 0);
-            // if (canDestroy) Destroy(this.gameObject);
+            if (canDestroy) Destroy(this.gameObject);
         }
     }
 

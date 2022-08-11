@@ -26,6 +26,7 @@ public class PlayerAgent : MonoBehaviour
     public string currentFloor;
     public World startWorld;
     private World currentWorldA, currentWorldB;
+    public AudioClip walkingSound;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
@@ -46,6 +47,7 @@ public class PlayerAgent : MonoBehaviour
             movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
+            GlobalSound.current.PlayCustomSound(walkingSound, 0.5f, false);
         }
         else
         {
@@ -67,7 +69,6 @@ public class PlayerAgent : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            //Debug.Log(currentEntity);
             if (currentEntity != null)
             {
                 currentEntity?.OnE();
@@ -77,11 +78,13 @@ public class PlayerAgent : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             EntityBase hitComponent = CursorManager.current.TryGetHitComponent<EntityBase>();
+            Debug.Log(hitComponent);
             GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {
                 if ((currentWorld == hitComponent.SBelongWorld || currentWorld == "None"))
-                    hitComponent?.OnInteract();
+                    Debug.Log("Hello");
+                hitComponent?.OnInteract();
             }
         }
 
@@ -93,7 +96,6 @@ public class PlayerAgent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
         currentEntity = other.GetComponent<EntityBase>();
         if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
             return;
@@ -106,11 +108,6 @@ public class PlayerAgent : MonoBehaviour
             else
                 uI_Bubble.SetInteractive();
         } else uI_Bubble.SetInteractive();
-
-        if (other?.tag == "Wall")
-        {
-            horizontal *= -1;
-        }
 
         if (other?.gameObject.layer == LayerMask.NameToLayer("Interactive"))
         {
