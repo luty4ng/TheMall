@@ -1348,15 +1348,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
-<<<<<<< Updated upstream
-      propertyPath: OpenState
-      value: 
-      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
-=======
       propertyPath: Unlock_sound
       value: 
       objectReference: {fileID: 8300000, guid: 24a329eee8c64de43858149ab98efbf1, type: 3}
->>>>>>> Stashed changes
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: NumOfItemToExit
       value: 99
