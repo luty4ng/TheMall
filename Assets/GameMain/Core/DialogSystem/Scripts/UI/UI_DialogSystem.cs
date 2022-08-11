@@ -14,13 +14,11 @@ public class UI_DialogSystem : UIGroup
     public UI_DialogResponse uI_DialogResponse;
     public GameObject indicator;
     public Image character;
-    private Animator animator;
-    
-    protected override void OnStart()
+    public Animator animator;
+
+    protected override void Awake()
     {
-        base.OnStart();
-        // panelCanvasGroup.alpha = 0;
-        // this.gameObject.SetActive(false);
+        base.Awake();
         animator = GetComponent<Animator>();
     }
 

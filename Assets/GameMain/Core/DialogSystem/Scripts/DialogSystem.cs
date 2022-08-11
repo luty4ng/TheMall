@@ -106,7 +106,7 @@ public class DialogSystem : GameKitComponent
             }
         }
 
-        uI_DialogSystem.indicator.SetActive(!isTextShowing);
+         uI_DialogSystem.indicator.SetActive(!isTextShowing);
     }
 
     private void UpdateChoiceUI()
