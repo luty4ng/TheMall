@@ -3294,6 +3294,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 542da689da694bf43ae19684d8b5defa, type: 2}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: Unlock_sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 24a329eee8c64de43858149ab98efbf1, type: 3}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: NumOfItemToExit
       value: 99
       objectReference: {fileID: 0}
@@ -4857,6 +4861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDialoging: 0
+  pageFlipping: {fileID: 0}
 --- !u!4 &1113917851
 Transform:
   m_ObjectHideFlags: 0
@@ -6118,6 +6123,7 @@ MonoBehaviour:
   camFollowPos: {fileID: 1947351981}
   currentFloor: Floor1
   startWorld: {fileID: 1690970294}
+  walkingSound: {fileID: 0}
 --- !u!95 &1348346947
 Animator:
   serializedVersion: 3
