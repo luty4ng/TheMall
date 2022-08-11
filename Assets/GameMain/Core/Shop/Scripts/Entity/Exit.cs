@@ -12,7 +12,6 @@ public class Exit : EntityBase
     public bool Exitable;
     public Sprite OpenState;
     public AudioClip Unlock_sound;
-    public Sprite openState;
 
     protected override void OnStart()
     {
@@ -66,7 +65,6 @@ public class Exit : EntityBase
         Exitable = true;
         this.GetComponent<SpriteRenderer>().sprite = OpenState;
         GlobalSound.current.PlaySound("开门声", .4f);
-        this.GetComponent<SpriteRenderer>().sprite = openState;
     }
 
     /// <summary>
