@@ -102,6 +102,7 @@ public class DialogSystem : GameKitComponent
                 }
                 else
                     InterruptTextDisplay();
+                Debug.Log("Wpr");
                 GlobalSound.current.PlaySound("对话框翻页的声音", .4f, false);
             }
         }

@@ -47,7 +47,8 @@ public class PlayerAgent : MonoBehaviour
             movement = new Vector3(horizontal * Time.deltaTime * speed, 0, 0);
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
             transform.Translate(movement);
-            GlobalSound.current.PlayCustomSound(walkingSound, 1f, false);
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) GlobalSound.current.stepSound.enabled = true;
+            else GlobalSound.current.stepSound.enabled = false;
         }
         else
         {
