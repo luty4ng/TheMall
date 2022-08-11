@@ -83,7 +83,6 @@ public class PlayerAgent : MonoBehaviour
             if (hitComponent != null)
             {
                 if ((currentWorld == hitComponent.SBelongWorld || currentWorld == "None"))
-                    Debug.Log("Hello");
                 hitComponent?.OnInteract();
             }
         }
