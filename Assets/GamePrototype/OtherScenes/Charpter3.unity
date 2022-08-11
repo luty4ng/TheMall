@@ -4857,6 +4857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDialoging: 0
+  pageFlipping: {fileID: 0}
 --- !u!4 &1113917851
 Transform:
   m_ObjectHideFlags: 0
@@ -6118,6 +6119,7 @@ MonoBehaviour:
   camFollowPos: {fileID: 1947351981}
   currentFloor: Floor1
   startWorld: {fileID: 1690970294}
+  walkingSound: {fileID: 8300000, guid: 884b577786848ef42b9702474cc7a400, type: 3}
 --- !u!95 &1348346947
 Animator:
   serializedVersion: 3
