@@ -7,7 +7,7 @@ public class GlobalSound : MonoSingletonBase<GlobalSound>
     private AudioSource audioSource;
     public AudioSource bgm1;
     public AudioSource bgm2;
-    public AudioSource stepSound;
+    public AudioSource stepSound, flipping;
     [Header("声音渐变的速度"), Range(0f, 1f)] public float GradientSpeed = 0.2f;
     public List<AudioClip> musics = new List<AudioClip>();
     public List<AudioClip> sounds = new List<AudioClip>();
