@@ -26,17 +26,23 @@ public class DialogSystem : GameKitComponent
 
     private void Start()
     {
-        uI_DialogSystem = UIManager.instance.GetUI<UI_DialogSystem>("UI_DialogSystem");
-        uI_Recorder = UIManager.instance.GetUI<UI_Recorder>("UI_Recorder");
-        textAnimatorPlayer = uI_DialogSystem.textAnimatorPlayer;
+        Init();
         AddressableManager.instance.GetAssetAsyn<CharacterPool>("Character Pool", (characterPool) =>
         {
             this.characterPool = characterPool;
         });
     }
 
+    private void Init()
+    {
+        uI_DialogSystem = UIManager.instance.GetUI<UI_DialogSystem>("UI_DialogSystem");
+        uI_Recorder = UIManager.instance.GetUI<UI_Recorder>("UI_Recorder");
+        textAnimatorPlayer = uI_DialogSystem.textAnimatorPlayer;
+    }
+
     public void StartDialog(string title, string dialogText, UnityAction callback = null)
     {
+        // Init();
         isDialoging = true;
         Debug.Log($"Start Dialog");
         isTextShowing = false;
@@ -49,6 +55,7 @@ public class DialogSystem : GameKitComponent
 
     public void StartDialog(string title, UnityAction callback = null)
     {
+        // Init();
         AddressableManager.instance.GetAssetsAsyn<DialogAsset>(new List<string> { "DialogPack" }, callback: (IList<DialogAsset> assets) =>
         {
             List<DialogAsset> dialogAssets = new List<DialogAsset>(assets);
@@ -70,6 +77,7 @@ public class DialogSystem : GameKitComponent
             GlobalSound.current.flipping.enabled = false;
             return;
         }
+
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -99,6 +107,7 @@ public class DialogSystem : GameKitComponent
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log($"???");
                 if (isTextShowing == false)
                 {
                     ExcuteTextDisplay();
@@ -106,7 +115,8 @@ public class DialogSystem : GameKitComponent
                 else
                     InterruptTextDisplay();
                 GlobalSound.current.flipping.enabled = true;
-            } else if (Input.GetKeyUp(KeyCode.Space)) GlobalSound.current.flipping.enabled = false;
+            }
+            else if (Input.GetKeyUp(KeyCode.Space)) GlobalSound.current.flipping.enabled = false;
         }
 
         uI_DialogSystem.indicator.SetActive(!isTextShowing);

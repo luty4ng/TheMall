@@ -78,7 +78,6 @@ public class PlayerAgent : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             EntityBase hitComponent = CursorManager.current.TryGetHitComponent<EntityBase>();
-            Debug.Log(hitComponent);
             GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {
@@ -122,7 +121,7 @@ public class PlayerAgent : MonoBehaviour
         {
             if (currentEntity == null)
                 currentEntity = other.GetComponent<EntityBase>();
-            if (currentWorld != currentEntity.SBelongWorld)
+            if (currentWorld != currentEntity?.SBelongWorld)
                 return;
             currentEntity?.OnPassExit();
         }

@@ -62,11 +62,12 @@ namespace GameKit
                 if (current.Value.GetType() == ctype)
                 {
                     Debug.Log("Game Kit component type is already exist: " + ctype.FullName);
+                    s_GameKitComponents.Remove(current);
+                    s_GameKitComponents.AddLast(gameKitComponent);
                     return;
                 }
                 current = current.Next;
             }
-
             s_GameKitComponents.AddLast(gameKitComponent);
         }
     }
