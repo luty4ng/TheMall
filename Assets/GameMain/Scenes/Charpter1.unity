@@ -1348,6 +1348,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: OpenState
+      value: 
+      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: Unlock_sound
       value: 
       objectReference: {fileID: 8300000, guid: 24a329eee8c64de43858149ab98efbf1, type: 3}
@@ -5353,8 +5357,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
-  m_sharedMaterial: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11990,8 +11994,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
-  m_sharedMaterial: {fileID: 7902553114752069189, guid: 1750a7e42eab4f94e8e02cc49a856a9c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14221,6 +14225,10 @@ PrefabInstance:
       propertyPath: Response
       value: 
       objectReference: {fileID: 11400000, guid: f73813750a038614fa739c63b18076ce, type: 2}
+    - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
+      propertyPath: OpenState
+      value: 
+      objectReference: {fileID: 21300000, guid: 397bfe70e51f8af48bfcf5c2c16d3ce4, type: 3}
     - target: {fileID: 7719177181300779530, guid: b90bad2442208d844b92e598fd548b03, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -23145,6 +23153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm1: {fileID: 1008866927}
   bgm2: {fileID: 2121646582}
+  stepSound: {fileID: 0}
   GradientSpeed: 0.2
   musics: []
   sounds:
@@ -24722,7 +24731,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Charpter2_ComingSoonCG
+          m_StringArgument: Charpter1_Transition
           m_BoolArgument: 0
         m_CallState: 2
   anim: {fileID: 0}
@@ -28861,7 +28870,6 @@ MonoBehaviour:
   camFollowPos: {fileID: 1297085663}
   currentFloor: Floor1
   startWorld: {fileID: 1564224984}
-  walkingSound: {fileID: 8300000, guid: 884b577786848ef42b9702474cc7a400, type: 3}
 --- !u!95 &2119148435
 Animator:
   serializedVersion: 3

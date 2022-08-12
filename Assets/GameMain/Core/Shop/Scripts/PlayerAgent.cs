@@ -26,7 +26,6 @@ public class PlayerAgent : MonoBehaviour
     public string currentFloor;
     public World startWorld;
     private World currentWorldA, currentWorldB;
-    public AudioClip walkingSound;
     private void Start()
     {
         dialogSystem = GameKitComponentCenter.GetComponent<DialogSystem>();
@@ -79,7 +78,7 @@ public class PlayerAgent : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             EntityBase hitComponent = CursorManager.current.TryGetHitComponent<EntityBase>();
-            Debug.Log(hitComponent?.SBelongWorld);
+            Debug.Log(hitComponent);
             GameObject hitObject = CursorManager.current.TryGetHitGameObject();
             if (hitComponent != null)
             {

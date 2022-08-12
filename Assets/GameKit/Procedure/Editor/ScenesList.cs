@@ -25,8 +25,10 @@ public static class ScenesList
     public static void Assets_GameMain_Core_Shop_Shop_Prototype_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Core/Shop/Shop_Prototype.unity"); }
     [MenuItem("Scenes/Charpter1")]
     public static void Assets_GameMain_Scenes_Charpter1_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter1.unity"); }
-    [MenuItem("Scenes/Charpter2_ComingSoonCG")]
-    public static void Assets_GameMain_Scenes_Charpter2_ComingSoonCG_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter2_ComingSoonCG.unity"); }
+    [MenuItem("Scenes/Charpter1_Transition")]
+    public static void Assets_GameMain_Scenes_Charpter1_Transition_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter1_Transition.unity"); }
+    [MenuItem("Scenes/Charpter3_ComingSoonCG")]
+    public static void Assets_GameMain_Scenes_Charpter3_ComingSoonCG_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter3_ComingSoonCG.unity"); }
     [MenuItem("Scenes/Charpter_StartCG")]
     public static void Assets_GameMain_Scenes_Charpter_StartCG_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter_StartCG.unity"); }
     [MenuItem("Scenes/GameKit_Launcher")]
@@ -39,6 +41,8 @@ public static class ScenesList
     public static void Assets_GamePrototype_OtherScenes_Charpter1_2_unity() { ScenesUpdate.OpenScene("Assets/GamePrototype/OtherScenes/Charpter1 2.unity"); }
     [MenuItem("Scenes/Charpter2")]
     public static void Assets_GamePrototype_OtherScenes_Charpter2_unity() { ScenesUpdate.OpenScene("Assets/GamePrototype/OtherScenes/Charpter2.unity"); }
+    [MenuItem("Scenes/Charpter3 1")]
+    public static void Assets_GamePrototype_OtherScenes_Charpter3_1_unity() { ScenesUpdate.OpenScene("Assets/GamePrototype/OtherScenes/Charpter3 1.unity"); }
     [MenuItem("Scenes/Charpter3")]
     public static void Assets_GamePrototype_OtherScenes_Charpter3_unity() { ScenesUpdate.OpenScene("Assets/GamePrototype/OtherScenes/Charpter3.unity"); }
     [MenuItem("Scenes/Charpter4")]

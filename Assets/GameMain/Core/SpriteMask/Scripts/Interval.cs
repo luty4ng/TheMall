@@ -26,7 +26,8 @@ public class Interval : MonoBehaviour
     public World WorldA;
     public World WorldB;
     public bool isMoving = false;
-    public Transform player;
+    public Transform Location;
+
 
     private void Start()
     {
@@ -127,7 +128,7 @@ public class Interval : MonoBehaviour
 
     public void changePosition()
     {
-        transform.position = new Vector3(player.position.x + 10, player.position.y, player.position.z);
+        transform.position = Location.position;
 
     }
 }
