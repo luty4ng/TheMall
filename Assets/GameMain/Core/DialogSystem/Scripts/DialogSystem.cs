@@ -66,7 +66,10 @@ public class DialogSystem : GameKitComponent
     private void Update()
     {
         if (IsActive == false || dialogTree == null)
+        {
+            GlobalSound.current.flipping.enabled = false;
             return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -102,8 +105,8 @@ public class DialogSystem : GameKitComponent
                 }
                 else
                     InterruptTextDisplay();
-                GlobalSound.current.PlaySound("对话框翻页的声音", .4f, false);
-            }
+                GlobalSound.current.flipping.enabled = true;
+            } else if (Input.GetKeyUp(KeyCode.Space)) GlobalSound.current.flipping.enabled = false;
         }
 
         uI_DialogSystem.indicator.SetActive(!isTextShowing);

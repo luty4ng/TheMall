@@ -11,7 +11,6 @@ public class Exit : EntityBase
     public UnityEvent onInteract;
     public bool Exitable;
     public Sprite OpenState;
-    public AudioClip Unlock_sound;
 
     protected override void OnStart()
     {
