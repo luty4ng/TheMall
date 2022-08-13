@@ -5,6 +5,7 @@ using GameKit.DataStructure;
 using GameKit;
 using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 
 [DisallowMultipleComponent]
 [AddComponentMenu("GameKit/Dialog System")]
@@ -21,11 +22,14 @@ public class DialogSystem : GameKitComponent
     private bool isInSelection = false;
     private bool isTextShowing = false;
     public bool isDialoging;
+    private DialogButton DialogBtn;
 
     private UnityAction Callback;
 
     private void Start()
     {
+        if(GameObject.Find("Btn_Dialog") != null)
+            DialogBtn = GameObject.Find("Btn_Dialog").GetComponent<DialogButton>();
         Init();
         AddressableManager.instance.GetAssetAsyn<CharacterPool>("Character Pool", (characterPool) =>
         {
@@ -72,6 +76,7 @@ public class DialogSystem : GameKitComponent
 
     private void Update()
     {
+        Debug.Log(DialogBtn.isPressed);
         if (IsActive == false || dialogTree == null)
         {
             GlobalSound.current.flipping.enabled = false;
@@ -88,7 +93,7 @@ public class DialogSystem : GameKitComponent
 
         if (!isOptionShowing && isInSelection)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || DialogBtn.isPressed)
             {
                 int choiceIndex = uI_DialogSystem.GetSelection();
                 isInSelection = false;
@@ -99,13 +104,14 @@ public class DialogSystem : GameKitComponent
                     uI_DialogSystem.uI_DialogResponse.IsActive = false;
                     uI_DialogSystem.uI_DialogResponse.gameObject.SetActive(false);
                 });
+                DialogBtn.isPressed = false;
                 return;
             }
         }
 
         if (!isInSelection)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || DialogBtn.isPressed)
             {
                 Debug.Log($"???");
                 if (isTextShowing == false)
@@ -115,6 +121,7 @@ public class DialogSystem : GameKitComponent
                 else
                     InterruptTextDisplay();
                 GlobalSound.current.flipping.enabled = true;
+                DialogBtn.isPressed = false;
             }
             else if (Input.GetKeyUp(KeyCode.Space)) GlobalSound.current.flipping.enabled = false;
         }
