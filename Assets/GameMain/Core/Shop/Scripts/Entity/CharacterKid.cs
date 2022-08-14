@@ -14,7 +14,6 @@ public class CharacterKid : CharacterManager
                 this.gameObject.SetActive(false);
                 hint.SetActive(true);
                 dialogSystem.StartDialog(AfterFind.title, AfterFind.contents);
-
             }
                 
         }

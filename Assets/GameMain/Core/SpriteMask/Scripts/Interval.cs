@@ -131,4 +131,9 @@ public class Interval : MonoBehaviour
         transform.position = Location.position;
 
     }
+
+    private void OnDestroy()
+    {
+        ticker.Cancel();
+    }
 }

@@ -4102,6 +4102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e462a34f8f2383846bdda656739077ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuickNextScene: 
 --- !u!1001 &921128865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6207,7 +6208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041112559509237803, guid: 31f5526a93bf1774abd94415c8b00bed, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6041112559509237815, guid: 31f5526a93bf1774abd94415c8b00bed, type: 3}
       propertyPath: m_Pivot.x
