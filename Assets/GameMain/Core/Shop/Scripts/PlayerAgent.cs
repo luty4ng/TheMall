@@ -95,6 +95,7 @@ public class PlayerAgent : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         currentEntity = other.GetComponent<EntityBase>();
+        Debug.Log(currentEntity);
         if (currentEntity == null || currentWorld != currentEntity.SBelongWorld)
             return;
         currentEntity.OnPassEnter();

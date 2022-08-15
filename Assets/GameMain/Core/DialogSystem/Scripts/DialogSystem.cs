@@ -76,10 +76,8 @@ public class DialogSystem : GameKitComponent
 
     private void Update()
     {
-        Debug.Log(DialogBtn.isPressed);
         if (IsActive == false || dialogTree == null)
         {
-            GlobalSound.current.flipping.enabled = false;
             return;
         }
 
@@ -113,17 +111,15 @@ public class DialogSystem : GameKitComponent
         {
             if (Input.GetKeyDown(KeyCode.Space) || DialogBtn.isPressed)
             {
-                Debug.Log($"???");
                 if (isTextShowing == false)
                 {
                     ExcuteTextDisplay();
                 }
                 else
                     InterruptTextDisplay();
-                GlobalSound.current.flipping.enabled = true;
+                GlobalSound.current.flipping.Play();
                 DialogBtn.isPressed = false;
             }
-            else if (Input.GetKeyUp(KeyCode.Space)) GlobalSound.current.flipping.enabled = false;
         }
 
         uI_DialogSystem.indicator.SetActive(!isTextShowing);
