@@ -31,6 +31,8 @@ public static class ScenesList
     public static void Assets_GameMain_Scenes_Charpter3_ComingSoonCG_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter3_ComingSoonCG.unity"); }
     [MenuItem("Scenes/Charpter_StartCG")]
     public static void Assets_GameMain_Scenes_Charpter_StartCG_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter_StartCG.unity"); }
+    [MenuItem("Scenes/Charpter_Tutorial")]
+    public static void Assets_GameMain_Scenes_Charpter_Tutorial_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/Charpter_Tutorial.unity"); }
     [MenuItem("Scenes/GameKit_Launcher")]
     public static void Assets_GameMain_Scenes_GameKit_Launcher_unity() { ScenesUpdate.OpenScene("Assets/GameMain/Scenes/GameKit_Launcher.unity"); }
     [MenuItem("Scenes/GameMain")]
