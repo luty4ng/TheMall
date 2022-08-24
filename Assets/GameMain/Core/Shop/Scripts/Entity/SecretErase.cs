@@ -7,6 +7,7 @@ public class SecretErase : MonoBehaviour
 {
     public int unlockPoint = 0;
     public UnityEvent AfterAchieved;
+    public int GoalPoint = 3;
 public void conditionProgressed()
     {
         unlockPoint = unlockPoint += 1;
@@ -15,6 +16,6 @@ public void conditionProgressed()
     // Update is called once per frame
     void Update()
     {
-        if (unlockPoint >= 3) AfterAchieved?.Invoke();
+        if (unlockPoint >= GoalPoint) AfterAchieved?.Invoke();
     }
 }
