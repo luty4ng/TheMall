@@ -27,6 +27,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -133,7 +134,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 47f5431586a43ef4ba88721d9b3ed8be
-      internalID: 0
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -148,6 +149,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Photo: 21300000
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

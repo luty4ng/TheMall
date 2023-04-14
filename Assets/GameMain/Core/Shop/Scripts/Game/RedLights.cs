@@ -1,15 +1,15 @@
 using UnityEngine;
 using GameKit;
 using System.Collections;
-using UnityEngine.Experimental.Rendering.Universal;
+
 public class RedLights : MonoSingletonBase<RedLights>
 {
-    public Light2D[] light2Ds;
+    public UnityEngine.Rendering.Universal.Light2D[] light2Ds;
     public float showSpeed = 1;
-    public Light2D globalLight;
+    public UnityEngine.Rendering.Universal.Light2D globalLight;
     private void Start()
     {
-        light2Ds = GetComponentsInChildren<Light2D>();
+        light2Ds = GetComponentsInChildren<UnityEngine.Rendering.Universal.Light2D>();
         foreach (var light2D in light2Ds)
         {
             light2D.intensity = 0;
@@ -26,7 +26,7 @@ public class RedLights : MonoSingletonBase<RedLights>
         }
     }
 
-    IEnumerator SlowlyShowLight(Light2D light2D)
+    IEnumerator SlowlyShowLight(UnityEngine.Rendering.Universal.Light2D light2D)
     {
         while (light2D.intensity < 1)
         {
@@ -35,7 +35,7 @@ public class RedLights : MonoSingletonBase<RedLights>
         }
     }
 
-    IEnumerator SlowlyHideLight(Light2D light2D)
+    IEnumerator SlowlyHideLight(UnityEngine.Rendering.Universal.Light2D light2D)
     {
         while (light2D.intensity > 0.2f)
         {

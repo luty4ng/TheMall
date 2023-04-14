@@ -20,7 +20,7 @@ public class CharacterKid : CharacterManager
         else
         {
             if (dialogAsset != null)
-                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents);
+                dialogSystem.StartDialog(dialogAsset.title, dialogAsset.contents, ()=> immediateInteract?.Invoke());
         }
         onInteract?.Invoke();
         

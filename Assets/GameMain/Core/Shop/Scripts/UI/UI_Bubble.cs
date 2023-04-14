@@ -10,7 +10,7 @@ public class UI_Bubble : UIGroup
     public Transform Player;
     private Animator animator;
     public Canvas canvas;
-    [SerializeField] private Sprite interactive, collective;
+    [SerializeField] private Sprite collective;
     private Sequence sequence;
     [SerializeField] private Image image;
     protected override void OnStart()
@@ -42,11 +42,6 @@ public class UI_Bubble : UIGroup
     {
         sequence.Kill();
         sequence.Append(panelCanvasGroup.DOFade(0, 0.3f));
-    }
-
-    public void SetInteractive()
-    {
-        image.sprite = interactive;
     }
 
     public void SetCollective()

@@ -6,7 +6,7 @@ using DG.Tweening;
 public class Obstacle : EntityBase
 {
     public Transform ImagTrans;
-    public bool canOpen = true;
+    public bool canOpen;
     [SerializeField] Item[] coverItem;
 
     protected override void OnStart()
@@ -16,6 +16,11 @@ public class Obstacle : EntityBase
         StartCoroutine(ExecuteNextFrame());
     }
 
+    public void Openable()
+    {
+        print("Self-destruction.");
+        canOpen = true;
+    }
 
     IEnumerator ExecuteNextFrame()
     {

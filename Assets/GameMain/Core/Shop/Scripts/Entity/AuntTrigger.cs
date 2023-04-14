@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class AuntTrigger : MonoBehaviour
 {
-    public Light2D light2Ds;
+    public UnityEngine.Rendering.Universal.Light2D light2Ds;
     public float showSpeed = 3f;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class AuntTrigger : MonoBehaviour
         StartCoroutine(SlowlyShowLight(light2Ds));
     }
 
-    IEnumerator SlowlyShowLight(Light2D light2D)
+    IEnumerator SlowlyShowLight(UnityEngine.Rendering.Universal.Light2D light2D)
     {
         while (light2D.intensity < 1)
         {

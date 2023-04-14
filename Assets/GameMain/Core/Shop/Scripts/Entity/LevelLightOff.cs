@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class LevelLightOff : MonoBehaviour
 {
-    public Light2D[] light2Ds;
+    public UnityEngine.Rendering.Universal.Light2D[] light2Ds;
     public float showSpeed = 1;
     // Start is called before the first frame update
     void Start()
     {
-        light2Ds = GetComponentsInChildren<Light2D>();
+        light2Ds = GetComponentsInChildren<UnityEngine.Rendering.Universal.Light2D>();
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class LevelLightOff : MonoBehaviour
         }
     }
     
-    IEnumerator SlowlyHideLight(Light2D light2D)
+    IEnumerator SlowlyHideLight(UnityEngine.Rendering.Universal.Light2D light2D)
     {
         while (light2D.intensity > 0.3f)
         {

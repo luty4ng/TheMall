@@ -103,19 +103,17 @@ public class PlayerAgent : MonoBehaviour
         if(currentEntity as Item != null)
         {
             if ((currentEntity as Item).canCollect)
-                uI_Bubble.SetCollective();
-            else uI_Bubble.SetInteractive();
+                uI_Bubble.Show();
         } else if(currentEntity as Exit != null)
         {
-            if ((currentEntity as Exit).Exitable) uI_Bubble.SetCollective();
-            else uI_Bubble.SetInteractive();
-        }else uI_Bubble.SetInteractive();
-
-        if (other?.gameObject.layer == LayerMask.NameToLayer("Interactive"))
-        {
-            
-            uI_Bubble.Show();
+            if ((currentEntity as Exit).Exitable) uI_Bubble.Show();
         }
+
+        //if (other?.gameObject.layer == LayerMask.NameToLayer("Interactive"))
+        //{
+            
+        //    uI_Bubble.Show();
+        //}
 
     }
 
